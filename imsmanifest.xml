@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest identifier="_5rjLu7NVnoc_course_id" version="1.0" xmlns="http://www.imsproject.org/xsd/imscp_rootv1p1p2" xmlns:adlcp="http://www.adlnet.org/xsd/adlcp_rootv1p2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsproject.org/xsd/imscp_rootv1p1p2 imscp_rootv1p1p2.xsd http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd http://www.adlnet.org/xsd/adlcp_rootv1p2 adlcp_rootv1p2.xsd">
+  <metadata>
+    <schema>ADL SCORM</schema>
+    <schemaversion>1.2</schemaversion>
+    <lom xmlns="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.imsglobal.org/xsd/imsmd_rootv1p2p1 imsmd_rootv1p2p1.xsd">
+      <general>
+        <title>
+          <langstring xml:lang="x-none">ELV 301 – Installing the TCx Elevate Platform on 4690</langstring>
+        </title>
+      </general>
+      <lifecycle>
+        <version>
+          <langstring xml:lang="x-none">1</langstring>
+        </version>
+        <status>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">Final</langstring>
+          </value>
+        </status>
+      </lifecycle>
+      <metametadata>
+        <metadatascheme>ADL SCORM 1.2</metadatascheme>
+      </metametadata>
+      <educational>
+        <typicallearningtime>
+          <datetime>PT0H0M0S</datetime>
+        </typicallearningtime>
+      </educational>
+      <rights>
+        <cost>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </cost>
+        <copyrightandotherrestrictions>
+          <source>
+            <langstring xml:lang="x-none">LOMv1.0</langstring>
+          </source>
+          <value>
+            <langstring xml:lang="x-none">yes</langstring>
+          </value>
+        </copyrightandotherrestrictions>
+      </rights>
+    </lom>
+  </metadata>
+  <organizations default="ELV_301_–_Installing_the_TCx_Elevate_Platform_on_4690_ORG">
+    <organization identifier="ELV_301_–_Installing_the_TCx_Elevate_Platform_on_4690_ORG">
+      <title>ELV 301 – Installing the TCx Elevate Platform on 4690</title>
+      <item identifier="ELV_301_-_Installation_of_the_TCx_Elevate_Platform_on_4690_SCO" isvisible="true" identifierref="__5rjLu7NVnoc_course_id_RES">
+        <title>ELV 301 – Installing the TCx Elevate Platform on 4690</title>
+      </item>
+    </organization>
+  </organizations>
+  <resources>
+    <resource identifier="__5rjLu7NVnoc_course_id_RES" type="webcontent" href="index_lms.html" adlcp:scormtype="sco">
+      <file href="story_content/thumbnail.jpg" />
+      <file href="story_content/5fdL8o4fT38_22050_48_0.mp3" />
+      <file href="mobile/6TLiJHS8T74_80_DX294_DY294_CX220_CY82.png" />
+      <file href="mobile/6aIeVleNcjz_80_DX630_DY630_CX471_CY166.png" />
+      <file href="mobile/6T2eJnCU1Cr_80_DX344_DY344_CX255_CY48.png" />
+      <file href="story_content/6aiNjJjtFJ8_22050_48_0.mp3" />
+      <file href="mobile/5t3Ugwzo5gm_80_DX1686_DY1686_CX1264_CY843.jpg" />
+      <file href="mobile/5lxGbfSGVHD_80_DX936_DY936_CX698_CY15.png" />
+      <file href="mobile/6FdQ1OQjkHa_80_DX186_DY186_CX139_CY21.png" />
+      <file href="mobile/6qwmRWeKvfx_80_DX936_DY936_CX698_CY15.png" />
+      <file href="story_content/6qVeUuSI5YN_22050_48_0.mp3" />
+      <file href="mobile/6lkzlt0IkEc_80_DX160_DY160_CX117_CY18.png" />
+      <file href="story_content/6Hpwywobk7W_22050_48_0.mp3" />
+      <file href="mobile/6d1nW9Q2Woi_X_80_DX1250_DY1250_CX936_CY844.png" />
+      <file href="mobile/63PC4j6o4CU_80_DX966_DY966_CX724_CY667.png" />
+      <file href="story_content/660seU4DR8O_22050_48_0.mp3" />
+      <file href="mobile/5yThmHFlzqH_80_DX720_DY720_CX540_CY405.png" />
+      <file href="mobile/5lPD9fGhVmm_80_DX726_DY726_CX544_CY405.png" />
+      <file href="story_content/6Rzm6lqURii_22050_48_0.mp3" />
+      <file href="story_content/5mOd6qWnhc3_22050_48_0.mp3" />
+      <file href="story_content/video_5m1j0RF2a0F_22_48_740x416.mp4" />
+      <file href="mobile/video_5m1j0RF2a0F_22_48_740x416.jpg" />
+      <file href="story_content/6T2VZjFnnck_22050_48_0.mp3" />
+      <file href="story_content/video_62dRsLqNbNc_0_48_1600x900.mp4" />
+      <file href="mobile/video_62dRsLqNbNc_0_48_1600x900.jpg" />
+      <file href="story_content/video_6NpCqzdiVM6_0_48_1600x900.mp4" />
+      <file href="mobile/video_6NpCqzdiVM6_0_48_1600x900.jpg" />
+      <file href="story_content/video_6fWVOfe1wcJ_22_48_740x416.mp4" />
+      <file href="mobile/video_6fWVOfe1wcJ_22_48_740x416.jpg" />
+      <file href="story_content/video_5zFBbxWr7qy_0_48_1600x900.mp4" />
+      <file href="mobile/video_5zFBbxWr7qy_0_48_1600x900.jpg" />
+      <file href="story_content/video_6iQ1MdYhfek_0_48_1600x900.mp4" />
+      <file href="mobile/video_6iQ1MdYhfek_0_48_1600x900.jpg" />
+      <file href="mobile/6fhc7self80_80_DX1348_DY1348_CX1011_CY846.png" />
+      <file href="meta.xml" />
+      <file href="story_content/frame.json" />
+      <file href="story_content/user.js" />
+      <file href="mobile/Slide631IxuZtSWm.jpg" />
+      <file href="mobile/Slide5lyKaD0NOnC.jpg" />
+      <file href="html5/data/css/output.min.css" />
+      <file href="html5/data/js/5bb9H6l44AN.js" />
+      <file href="html5/data/js/5eDcLFZ2zSB.js" />
+      <file href="html5/data/js/5ndA3fi9kIC.js" />
+      <file href="html5/data/js/5oUGiNPUrZ4.js" />
+      <file href="html5/data/js/5tOSf1VYlCl.js" />
+      <file href="html5/data/js/5uZ98VB0QqY.js" />
+      <file href="html5/data/js/5vPrbiyBi7R.js" />
+      <file href="html5/data/js/5wNVj9I3PTN.js" />
+      <file href="html5/data/js/6f73RAt02Ki.js" />
+      <file href="html5/data/js/6ivdAmmqOul.js" />
+      <file href="html5/data/js/6k9cSkI7Pa4.js" />
+      <file href="html5/data/js/6M9uqm7lj8T.js" />
+      <file href="html5/data/js/6MrHuIpDKG1.js" />
+      <file href="html5/data/js/6MYsDanllcr.js" />
+      <file href="html5/data/js/6OIwz3GtCkd.js" />
+      <file href="html5/data/js/data.js" />
+      <file href="html5/data/js/frame.js" />
+      <file href="html5/data/js/paths.js" />
+      <file href="html5/lib/scripts/app.min.js" />
+      <file href="html5/lib/stylesheets/main.min.css" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-bold.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-light.woff" />
+      <file href="html5/lib/stylesheets/mobile-fonts/open-sans-regular.woff" />
+      <file href="story.html" />
+      <file href="story_html5.html" />
+      <file href="story_content/blank.html" />
+      <file href="story_content/story.js" />
+      <file href="index_lms.html" />
+      <file href="index_lms_html5.html" />
+      <file href="lms/AICCComm.html" />
+      <file href="lms/AICCFunctions.js" />
+      <file href="lms/API.js" />
+      <file href="lms/APIConstants.js" />
+      <file href="lms/blank.html" />
+      <file href="lms/browsersniff.js" />
+      <file href="lms/Configuration.js" />
+      <file href="lms/goodbye.html" />
+      <file href="lms/lms.js" />
+      <file href="lms/LMSAPI.js" />
+      <file href="lms/NONEFunctions.js" />
+      <file href="lms/SCORM2004Functions.js" />
+      <file href="lms/SCORMFunctions.js" />
+      <file href="lms/UtilityFunctions.js" />
+    </resource>
+  </resources>
+</manifest>

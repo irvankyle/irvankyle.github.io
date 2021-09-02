@@ -1,0 +1,76 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Noto Serif', serif;
+}
+h1, h2{
+	font-family: 'Noto Sans JP', sans-serif;
+	margin: 0px;
+}
+h3, h4{
+	font-family: 'Noto Sans', sans-serif;
+}
+h3{
+	background-image: linear-gradient(to right, white, #979797, white);
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#header{
+	background-color: #525252;
+	color: white;
+	padding-top: 25px;
+	padding-bottom: 10px;
+}
+#header_content{
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#main{
+	text-align: center;
+}
+#about_me{
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+}
+#about_me li,h4{
+	text-align: left;
+}
+
+#samples ul{
+	list-style-type: none;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 0;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 1500px;
+}
+#samples a {
+	text-decoration: none;
+	color: inherit;
+}
+#samples li{
+	display: inline-block;
+	max-width: 350px;
+	background-color: #DCDCDC;
+	margin: 20px;
+	padding: 15px;
+	border-radius: 4px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#samples li img{
+	width: 75%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 1px solid #ddd;
+	border-radius: 4px;
+}
+#samples li h4{
+	margin-top: 0px;
+	text-align: center;
+}

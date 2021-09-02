@@ -1,82 +1,134 @@
-<html>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<link rel="stylesheet" href="css/style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Noto+Serif&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100&display=swap" rel="stylesheet">
-	
-	<title>Kyle Irvan | Portfolio</title>
-	<link rel="icon" href="img/icon.png">
+<title></title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
+
+<style>
+
+body {
+
+	background-image: url('grunge_patterns.jpg');
+	background-attachment: fixed;
+	color: #333;
+}
+
+.box {
+	border-radius: 3px;
+	background: rgba(101, 101, 101, 0.7); margin: auto; padding: 12px;
+}
+
+.lightbox {
+	zoom: 1.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(10, 10, 10, 0.8);
+	text-align: center;
+	margin: auto;
+
+}
+
+div.horizontal {
+	display: flex;
+	justify-content: center;
+	height: 100%;
+}
+
+div.vertical {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+}
+
+::-webkit-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+::-moz-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+:-ms-input-placeholder {
+   color: #955;
+   text-align: center;
+}
+
+</style>
+
 <body>
-<div id="header">
-	<div id="header_content">
-		<div id="title">
-			<h1>Kyle Irvan</h1>
-			<h2>Instructional Designer</h2>
-		</div>
-		<div id="contact">
-			<ul>
-				<li>k.m.irvan@gmail.com</li>
-				<li>248-210-4136</li>
-				<li><a href="documents/Kyle Irvan Resume.pdf" target="_blank">View Resume</a></li>
-			</ul>
+
+	<div id="loginbox" class="lightbox" >
+		<div class="horizontal">
+			<div class="vertical">
+				<div class="box">
+					<input style="margin: 16px; text-align: center;" id="password" type="password" placeholder="password" /> <br />
+					<button id="loginbutton" type="button">Enter</button>
+					<p id="wrongPassword" style="display: none">wrong password</p>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>
-<div id="main">
-	<section id="about_me">
-		<h3>About Me</h3>
-		<p>Creative, analytical instructional designer with eight years of experience developing eLearning and instructor-led course offerings for global tier-one retailers, covering a range of store and enterprise retail technologies. Adept at a variety of eLearning development tools and learning management system administration. Documented success communicating effectively and working collaboratively with stakeholders at all organizational levels.</p>
-		<h4>What I Offer as an Instructional Designer:</h4>
-		<ul>
-			<li>Solid foundation in instructional design theories, methodologies and best practices, including the ADDIE model,
-			adult learning principles, multimedia principles and custom blended learning solutions</li>
-			<li>Over ten years of summative and formative evaluation experience with solid analytical skills to assess, determine
-			and develop recommendations to improve learning and the student experience</li>
-			<li>Successfully managed large scale education and training projects with budgets of $700K resulting in the delivery
-			of projects in a timely and cost effective manner within the agreed quality parameters</li>
-			<li>Educational technology expertise and proficiency in multimedia production with an emphasis in designing and
-			producing instructional videos, adaptive e-learning, instructor and learner materials, and educational games</li>
-			<li>Excellent interpersonal, collaborative and leadership skills, with the ability to work in multidisciplinary teams and
-			autonomously</li>
-		</ul>
-	</section>
-	<section id="samples">
-		<h3>Work Samples</h3>
-		<ul>
-			<a href="samples/ELV301/story.html" target="_blank"><li>
-				<h4>Software Install and Config Walkthrough</h4>
-				<img src="img/ELV301.png" alt="Software Install and Config Walkthrough" width="100%"></img>
-				<p><strong>Keywords:</strong> eLearning, video, UI, screen capture, software, Articulate Sotryline</p>
-			</li></a>
-			<a href="samples/Order_Validations/Elera Validation Rules Cheat Sheet.pdf" target="_blank"><li>
-				<h4>Application Concepts Infographic</h4>
-				<img src="img/order_validations.png" alt="Application Concepts Infographic" width="100%"></img>
-				<p><strong>Keywords:</strong> software, infographic, design</p>
-			</li></a>
-			<a href="samples/ELV420/index.html" target="_blank"><li>
-				<h4>Software Extension Introduction</h4>
-				<img src="img/ELV420.png" alt="Software Extension Introduction" width="100%"></img>
-				<p><strong>Keywords:</strong> eLearning, software, Articulate Rise, development, tutorial, extension</p>
-			</li></a>
-			<a href="samples/Curriculum Development/Curriculum Development.pdf" target="_blank"><li>
-				<h4>Curriculum Development</h4>
-				<img src="img/curriculum_development.png" alt="Curriculum Development" width="100%"></img>
-				<p><strong>Keywords:</strong> curriculum, process documentation</p>
-			</li></a>
-			<a href="samples/Course Blueprint/Course Blueprint.pdf" target="_blank"><li>
-				<h4>Course Blueprint</h4>
-				<img src="img/course_blueprint.png" alt="Course Blueprint" width="100%"></img>
-				<p><strong>Keywords:</strong> instructional design, process documentation</p>
-			</li></a>
-		</ul>
-	</section>
-	
-</div>
-<div id="footer">
-	<p>Kyle Irvan - Instructional Design Portfolio</p>
-</div>
+
+
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+
+	 <script type="text/javascript" src="https://rawcdn.githack.com/chrisveness/crypto/7067ee62f18c76dd4a9d372a00e647205460b62b/sha1.js"></script>
+
+	<script type="text/javascript">
+	"use strict";
+
+
+	function loadPage(pwd) {
+
+		var hash= pwd;
+		hash= Sha1.hash(pwd);
+		var url= hash + "/index.html";
+
+		$.ajax({
+			url : url,
+			dataType : "html",
+			success : function(data) {
+
+				window.location= url;
+
+			},
+			error : function(xhr, ajaxOptions, thrownError) {
+
+
+				parent.location.hash= hash;
+
+				//$("#wrongPassword").show();
+				$("#password").attr("placeholder","wrong password");
+				$("#password").val("");
+			}
+		});
+	}
+
+
+	$("#loginbutton").on("click", function() {
+		loadPage($("#password").val());
+	});
+	$("#password").keypress(function(e) {
+		if (e.which == 13) {
+
+			loadPage($("#password").val());
+		}
+	});
+	$("#password").focus();
+
+	</script>
+
 </body>
 </html>

@@ -1,0 +1,424 @@
+body{
+	margin: 0;
+	padding: 0;
+	position: relative;
+	min-height: calc(100vh - 65px);
+}
+p{
+	font-size: 14px;
+	font-family: 'Noto Serif', serif;
+}
+h1{
+	font-size: 27px;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;
+	margin-bottom: 0;
+}
+h2{
+	font-size: 18px;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 10;
+	margin-top: 0;
+	text-transform: uppercase;
+}
+h3{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;
+	font-size: 18pt;
+}
+a{
+	text-decoration: none;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;
+	font-size: 14px;
+	color: black;
+}
+#header{
+	height: 65px;
+	background-color: #626262;
+	position: fixed;
+	top:  0;
+	width: 100%;
+	z-index: 10;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+}
+.headerContent{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 8px;
+	width: 100%;
+	max-width: 1200px;
+}
+#header h1{
+	margin: 0;
+	font-size: 24px;
+}
+#header h2{
+	margin: 0;
+	font-size: 15px;
+}
+.headerLogo{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 250px;
+}
+.headerIcon{
+	width: 50px;
+	height: 50px;
+	border-radius: 60px;
+	background-image: url('../img/icon.png');
+	background-size: cover;
+	flex-shrink: 0;
+}
+#hamburger{
+	width: 50px;
+	height: 65px;
+	background-image: url('../img/hamburger.png');
+	background-size: contain;
+	background-position: center;
+}
+.mobileNav{
+	display: none;
+	position: fixed;
+	top: 65px;
+	right: 0;
+	background-color: white;
+	width: 375px;
+	box-sizing: border-box;
+	border: solid 2px #626262;
+}
+.mobileNav a{
+	display: block;
+	color: black;
+	font-size: 18px;
+	margin: 20px auto;
+	text-align: center;
+}
+#mainContent{
+	margin-top: 65px;
+}
+.narrow{
+	max-width: 900px;
+	margin: auto;
+	padding: 0 8px;
+}
+#splash{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#splash div{
+	margin: 0 8px;
+}
+#myLogo{
+	height: 100px;
+	width: 100px;
+	border-radius: 1000px;
+	background-image: url('../img/icon.png');
+	background-size: cover;
+	flex-shrink: 0;
+}
+
+.fullwidth{
+	text-align: center;
+	background-color: #ffdeba;
+}
+#work{
+	padding-bottom: 5px;
+}
+#highlights{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 5px auto;
+	max-width: 1024px;
+}
+.highlight{
+	width: 350px;
+	height: 120px;
+	background-color: #ffdeba;
+	margin: 8px 8px;
+}
+
+.highlightHover{
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,.67);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.highlightHover h3{
+	font-size: 18px;
+	margin: 0;
+	padding: 0;
+	color: white;
+}
+.highlightHover p{
+	margin: 0;
+	padding: 0;
+	display: none;
+	color: white;
+}
+.highlightHover a{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background-color: #ff8601;
+	color: white;
+	text-decoration: none;
+	border-radius: 100px;
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+}
+
+#about{
+	overflow:auto; 
+}
+
+#photo{
+	height: 100px;
+	width: 100px;
+	border-radius: 100px;
+	background-position: 59% 30%;
+	background-image: url('../img/placeholder.jpg');
+	margin: auto;
+}
+
+#skillsList{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	max-width: 1400px;
+	margin: auto;
+}
+.skill{
+	width: 175px;
+	height: 60px;
+	margin: 8px 0;
+	display: flex;
+	align-items: center;
+}
+.skillIcon{
+	width: 60px;
+	height: 60px;
+	border-radius: 600px;
+	display: inline-block;
+	background-color: #ff8601;
+	background-position: center;
+	background-size: cover;
+}
+.skillTitles{
+	display: inline-block;
+	text-align: left;
+	margin-left: 2px;
+}
+.skill h1{
+	font-size: 11px;
+}
+.skill h2{
+	font-size: 9px;
+}
+
+body::after {
+  content: '';
+  display: block;
+  height: 80px; 
+}
+
+#footer{
+	position: absolute;
+	bottom: 0;
+	height: 65px;
+	background-color: #626262;
+	width: 100%;
+	z-index: 10;
+	color: white;
+	display: flex;
+	justify-content: space-around;
+}
+#footer h1{
+	margin: 0;
+	font-size: 24px;
+}
+#footer h2{
+	margin: 0;
+	font-size: 15px;
+}
+
+form{
+	margin: 25px 16px;
+}
+label{
+	margin-top: 16px;
+	display: block;
+	font-size: 24px;
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;
+}
+input{
+	display: block;
+	width: 100%;
+	font-size: 14px;
+	font-family: 'Noto Serif', serif;
+}
+textarea{
+	display: block;
+	min-width: 100%;
+	height: 200px;
+	font-size: 14px;
+	font-family: 'Noto Serif', serif;
+}
+input[type=submit] {
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;	
+	margin: 16px auto;
+	font-size: 18px;
+    padding: 0;
+	background-color: #ff8601;
+	border: 0px;
+	color: white;
+	border-radius: 100px;
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;
+}
+
+#windowBlur{
+	width: 100vw;
+	height: 100vh;
+	box-sizing: border-box;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,.67);
+	z-index: 50;
+	display: none;
+	justify-content: space-around;
+	align-items: center;
+}
+#messageConfirmation{
+	width: 350px;
+	height: 350px;
+	box-sizing: border-box;
+	margin: 0 auto;
+	padding: 50px;
+	text-align: center;
+	background-color: #ffdeba;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+#messageConfirmation a{
+	display: block;
+	margin: 16px auto;
+	font-size: 18px;
+    padding: 0;
+	background-color: #ff8601;
+	border: 0px;
+	color: white;
+	border-radius: 100px;
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+	cursor: pointer;	
+}
+
+
+
+@media only screen and (min-width: 900px) {
+  /* For tablet: */
+	#photo{
+		height: 350px;
+		width: 285px;
+		border-radius: 0px;
+		float: right;
+		margin: 0 20px;
+		background-position: auto;
+		background-size: cover;
+	}
+	.nav{
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+	}
+	.nav a{
+		margin: 0 10px;
+		color: white;
+		font-size: 18px;
+		line-height: 65px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+  /* For Desktop: */
+	p{
+		font-size: 18px;
+	}
+	h1{
+		font-size: 36px;
+	}
+	h2{
+		font-size: 36px;
+	}
+	h3{
+		font-size: 24px;
+	}
+	a{
+		font-size: 18px;
+	}
+	#splash h1{
+		font-size: 72px;
+		margin-top: 0;
+	}
+	#splash p{
+		font-size: 24px;
+	}
+	#myLogo{
+		height: 225px;
+		width: 225px;
+	}
+	#highlights{
+		max-width: 100%;
+	}
+	.highlight{
+		width: 23vw;
+		height: 23vw;
+		max-width: 550px;
+		max-height: 550px;
+	}	
+	.highlightHover{
+		display: none;
+	}
+	.highlightHover p{
+		display: block;
+		margin: 8px;
+	}
+	.highlightHover h3{
+		font-size: 24px;
+	}.highlightHover a{
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
+	}
+	.skill{
+		width: 300px;
+		height: 100px;
+	}
+	.skillIcon{
+		width: 100px;
+		height: 100px;
+		margin-right: 5px;
+	}
+	.skill h1{
+		font-size: 18px;
+	}
+	.skill h2{
+		font-size: 16px;
+	}
+}

@@ -287,7 +287,9 @@ input[type=submit] {
 	width: 140px;
 	height: 36px;
 	line-height: 36px;
-	cursor: pointer;
+	cursor: pointer;-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 #windowBlur{

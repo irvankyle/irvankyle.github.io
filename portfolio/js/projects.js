@@ -23,7 +23,7 @@ var projects = [
 		'skills': 'Graphic Design',
 		'client': 'Toshiba Global Commerce Solutions',
 		'heroShot': "url('projects/jobAid/hero.png')",
-		'detailShot': '',
+		'detailShot': "projects/jobAid/detail.png",
 		'link': 'jobAid.html',
 		'problem': 	"",
 		'solution': "",

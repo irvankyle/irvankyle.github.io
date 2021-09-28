@@ -388,10 +388,9 @@ input[type=submit] {
 	width: 450px;
 }
 #projectProcess{
-	
+	overflow: auto;
 }
-#process{
-}
+
 #detailImg{
 	width: 350px;
 	float: right;

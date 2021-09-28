@@ -1,34 +1,40 @@
-var highlights = document.getElementsByClassName('highlight');
-for (let i=0;i<highlights.length;i++){
-	var highlight = highlights[i];
-	highlight.style.backgroundSize = 'cover';
-	highlight.style.backgroundPosition = 'center';
-	highlight.style.backgroundImage = projects[i].heroShot;
-	
-	var highlightHover = highlight.children[0];
-	var highlightContent = highlightHover.children[0];
-	for (let k=0; k<highlightContent.children.length; k++){
-		switch (highlightContent.children[k].tagName){
-			case 'H3':
-				highlightContent.children[k].innerText = projects[i].title;
-				break;
-			case 'P':
-				highlightContent.children[k].innerText = projects[i].shortDescription;
-				break;
-			case 'A':
-				highlightContent.children[k].setAttribute('href', projects[i].link);
-		}
-	}
+var highlights = document.getElementById('highlights');
+for (let i=0; i<4; i++){
+	if(projects[i]){
+		var highlight = document.createElement("DIV");
+		highlight.className = 'highlight';
+		highlight.style.backgroundSize = 'cover';
+		highlight.style.backgroundPosition = 'center';
+		highlight.style.backgroundImage = projects[i].heroShot;
+		var highlightHover = document.createElement("DIV");
+		highlightHover.className = 'highlightHover';
+		var highlightContent = document.createElement("DIV");
+		highlightContent.className = 'highlightContent';
+		var highlightTitle = document.createElement("H3");
+		highlightTitle.innerText = projects[i].title;
+		var highlightDescription = document.createElement("P");
+		highlightDescription.innerText = projects[i].shortDescription;
+		var highlightBtn = document.createElement("A");
+		highlightBtn.setAttribute('href', projects[i].link);
+		highlightBtn.innerText = 'View Project';
 		
-
+		highlightContent.appendChild(highlightTitle);
+		highlightContent.appendChild(highlightDescription);
+		highlightContent.appendChild(highlightBtn);
+		highlightHover.appendChild(highlightContent);
+		highlight.appendChild(highlightHover);
+		highlights.appendChild(highlight);
+	}
 }
+var displayedHighlights = document.getElementsByClassName('highlight');
+
 
 document.getElementsByTagName("BODY")[0].onresize = function() {hoverShowHide();};
 
 function hoverShowHide(){
 	if(window.innerWidth<1200){
-		for (let i=0;i<highlights.length;i++){
-			var highlight = highlights[i];
+		for (let i=0;i<displayedHighlights.length;i++){
+			var highlight = displayedHighlights[i];
 			var highlightHover = highlight.children[0];
 			highlightHover.style.display = 'flex';	
 
@@ -38,8 +44,8 @@ function hoverShowHide(){
 		
 	}
 	else{
-		for (let i=0;i<highlights.length;i++){
-			var highlight = highlights[i];
+		for (let i=0;i<displayedHighlights.length;i++){
+			var highlight = displayedHighlights[i];
 			var highlightHover = highlight.children[0];
 			highlightHover.style.display = 'none';
 			
@@ -53,11 +59,13 @@ function hoverShowHide(){
 function showHighlightInfo(){
 	var x = event.clientX, y = event.clientY,
 	currentHighlight = document.elementFromPoint(x, y);
-	currentHighlight.children[0].style.display = 'flex';
+	if(currentHighlight.className == 'highlight'){
+		currentHighlight.children[0].style.display = 'flex';
+	}
 }
 function hideHighlightInfo(){
-	for (let i=0;i<highlights.length;i++){
-		highlights[i].children[0].style.display = 'none';
+	for (let i=0;i<displayedHighlights.length;i++){
+		displayedHighlights[i].children[0].style.display = 'none';
 	}
 }
 

@@ -55,9 +55,9 @@ var skills = [
 		'subtitle': 'project management'
 	},
 	{
-		'title': 'Vyond',
-		'icon': "url('img/vyond logo.png')",
-		'subtitle': 'animation'
+		'title': 'Microsoft Office',
+		'icon': "url('img/office logo.jpg')",
+		'subtitle': 'office suite'
 	}
 
 ]

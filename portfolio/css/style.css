@@ -3,8 +3,6 @@ body{
 	padding: 0;
 	position: relative;
 	min-height: calc(100vh - 65px);
-}
-p{
 	font-size: 14px;
 	font-family: 'Noto Serif', serif;
 }
@@ -86,7 +84,7 @@ a{
 	top: 65px;
 	right: 0;
 	background-color: white;
-	width: 375px;
+	width: 100vw;
 	box-sizing: border-box;
 	border: solid 2px #626262;
 }
@@ -250,7 +248,33 @@ body::after {
 	margin: 0;
 	font-size: 15px;
 }
-
+#photoCredits{
+	width: 100%;
+	position: absolute;
+	bottom: 65px;
+	background-color: #626262;
+	justify-content: space-around;
+	flex-flow: row wrap;
+	display: none;
+}
+#photoCredits img{
+	width: 200px;
+	min-width: 200px;
+}
+#photoCredits a{
+	color: white;
+}
+#photoCreditsBtn{
+	font-family: 'Noto Sans JP', sans-serif;
+	font-weight: 900;
+	line-height: 65px;
+	cursor: pointer;
+}
+.photoCredit{
+	display: flex;
+	width: 500px;
+	min-width: 375px;
+}
 form{
 	margin: 25px 16px;
 }
@@ -332,6 +356,47 @@ input[type=submit] {
 	cursor: pointer;	
 }
 
+.project h1{
+	margin-top: 16px;
+}
+#projectOverview{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+}
+#heroImg{
+	width: 100vw;
+	margin-left: -8px;
+	margin-right: -8px;
+	height: 375px;
+	background-size: cover;
+	background-position: center;
+}
+#projectDetails{
+	max-width: 525px;
+}
+
+.notQuite{
+	margin: auto;
+	max-width: 1024px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-content: center;
+}
+.notQuite div{
+	width: 450px;
+}
+#projectProcess{
+	
+}
+#process{
+}
+#detailImg{
+	width: 350px;
+	float: right;
+	margin: 8px;
+}
 
 
 @media only screen and (min-width: 900px) {
@@ -356,10 +421,13 @@ input[type=submit] {
 		font-size: 18px;
 		line-height: 65px;
 	}
+	#heroImg{
+		width: 375px;
+	}
 }
 @media only screen and (min-width: 1200px) {
   /* For Desktop: */
-	p{
+	body{
 		font-size: 18px;
 	}
 	h1{

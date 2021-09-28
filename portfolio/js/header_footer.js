@@ -36,7 +36,7 @@ portfolioBtn.setAttribute('href', 'portfolio.html');
 contactBtn.setAttribute('href', 'contact.html');
 
 nav.appendChild(homeBtn);
-nav.appendChild(portfolioBtn);
+//nav.appendChild(portfolioBtn);
 nav.appendChild(contactBtn);
 
 var mobileNav = nav.cloneNode(true);
@@ -51,7 +51,7 @@ header.appendChild(headerContent);
 
 var footerLogo = logo.cloneNode(true);
 
-footer.appendChild(footerLogo);
+footer.prepend(footerLogo);
 
 var hamburger = document.createElement('DIV');
 hamburger.id = 'hamburger';
@@ -67,7 +67,23 @@ document.getElementById('mainContent').addEventListener('click', function(){
 	if(mobileNav.style.display == "block"){
 		mobileNav.style.display = 'none';
 	}
+	if(credits.style.display == 'flex'){
+		credits.style.display = 'none';
+	}
 });
+
+if(document.getElementById('photoCreditsBtn')){
+	var creditsBtn = document.getElementById('photoCreditsBtn');
+	var credits = document.getElementById('photoCredits');
+	creditsBtn.addEventListener('click', function(){
+		if(credits.style.display == 'flex'){
+			credits.style.display = 'none';
+		}
+		else{
+			credits.style.display = 'flex';
+		}
+	});
+}
 
 window.addEventListener('resize', mobileNavSwitch);
 

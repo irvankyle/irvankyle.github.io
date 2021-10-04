@@ -26,17 +26,11 @@ if (document.getElementById('mainContent').className == 'project'){
 	
 	document.getElementById('detailImg').src = project.detailShot;
 	
+	var title = "Kyle Irvan | " + project.title;
+	document.title = title;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	photoCredits.push(project.heroSource);			
+	generateCredits(photoCredits);
 	
 }
 

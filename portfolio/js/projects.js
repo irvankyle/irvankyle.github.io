@@ -9,6 +9,12 @@ var projects = [
 		'client': 'Toshiba Global Commerce Solutions',
 		'heroShot': "url('projects/remoteWorkshop/hero.jpg')",
 		'detailShot': "projects/remoteWorkshop/detail.png",
+		'heroSource': {
+			'original': 'img/stock/laptop-with-blank-white-screen.jpg',
+			'link': 'https://www.freepik.com/wayhomestudio',
+			'photographer': "wayhomestudio",
+			'title': "Laptop with blank white screen"
+		},
 		'link': 'remoteWorkshop.html',
 		'problem': 	"<p>Customers valued in-person workshops for the hands-on, practical exercises.</p><p>These exercises required specialized hardware and software configurations.</p><p>The hardware requirements, along with associated shipping and travel costs, made the workshops cost-prohibitive for smaller customers and led to long lead times in scheduling.</p>",
 		'solution': "<p>Virtualize the required hardware and host it in the cloud.</p><p>Lecture sections of the workshop are delivered via video conferencing software.</p><p>Students can perform the same exercises as the existing workshops in the virtual system through a web-browser.</p>",
@@ -23,8 +29,35 @@ var projects = [
 		'skills': 'Graphic Design',
 		'client': 'Toshiba Global Commerce Solutions',
 		'heroShot': "url('projects/jobAid/hero.png')",
+		'heroSource': {
+			'original': 'img/stock/close-up-hand-showing-stack-paper-mock-up.jpg',
+			'link': 'https://www.freepik.com/freepik',
+			'photographer': "freepik",
+			'title': "Close-up hand showing a stack of paper mock-up"
+		},
 		'detailShot': "projects/jobAid/detail.png",
 		'link': 'jobAid.html',
+		'problem': 	"",
+		'solution': "",
+		'process': ""
+	},
+	{
+		'id': 'atomicHabits',
+		'title': 'Interactive Book Summary',
+		'type': 'eLearning',
+		'shortDescription': 'This intarctive summary of the book "Atomic Habits" by James Clear presents the main concepts of the book along with interactive elements to really drive the ideas home.',
+		'tools': 'Figma, Articulate Storyline',
+		'skills': 'eLearning, Instructional Design',
+		'client': 'Professional Development',
+		'heroShot': "url('projects/atomicHabits/hero.jpg')",
+		'heroSource': {
+			'original': 'img/stock/overhead-view-digital-tablet-coffee-cup-spiral-notebook-with-pencil-wooden-textured-table.jpg',
+			'link': 'https://www.freepik.com/freepik',
+			'photographer': "freepik",
+			'title': "An overhead view of digital tablet; coffee cup and spiral notebook with pencil on wooden textured table"
+		},
+		'detailShot': "projects/jobAid/detail.png",
+		'link': 'atomicHabits.html',
 		'problem': 	"",
 		'solution': "",
 		'process': ""

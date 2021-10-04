@@ -1,12 +1,12 @@
 var skills = [
 	{
 		'title': 'Articulate Storyline',
-		'icon': "url('img/storyline logo.webp')",
+		'icon': "url('img/storyline logo.png')",
 		'subtitle': 'course authoring'
 	},
 	{
 		'title': 'Articulate Rise',
-		'icon': "url('img/rise logo.webp')",
+		'icon': "url('img/rise logo.png')",
 		'subtitle': 'course authoring'
 	},
 	{

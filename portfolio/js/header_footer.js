@@ -2,7 +2,7 @@ var header = document.getElementById('header');
 var footer = document.getElementById('footer');
 
 var headerContent = document.createElement('DIV');
-var logo = document.createElement('DIV');
+var logo = document.createElement('A');
 var icon = document.createElement('DIV');
 var logoText = document.createElement('DIV');
 var logoTitle = document.createElement('H1');
@@ -18,6 +18,7 @@ logoSubtitle.innerText = "INSTRUCTIONAL DESIGNER";
 logoText.appendChild(logoTitle);
 logoText.appendChild(logoSubtitle);
 
+logo.setAttribute('href', 'index.html');
 logo.appendChild(icon);
 logo.appendChild(logoText);
 logo.className = 'headerLogo';
@@ -63,26 +64,53 @@ hamburger.addEventListener('click',function(){
 	}
 	else{mobileNav.style.display = 'block';}
 });
+
 document.getElementById('mainContent').addEventListener('click', function(){
 	if(mobileNav.style.display == "block"){
 		mobileNav.style.display = 'none';
 	}
-	if(credits.style.display == 'flex'){
-		credits.style.display = 'none';
-	}
 });
 
-if(document.getElementById('photoCreditsBtn')){
-	var creditsBtn = document.getElementById('photoCreditsBtn');
-	var credits = document.getElementById('photoCredits');
-	creditsBtn.addEventListener('click', function(){
-		if(credits.style.display == 'flex'){
-			credits.style.display = 'none';
-		}
-		else{
-			credits.style.display = 'flex';
-		}
-	});
+var photoCredits =[];
+
+function generateCredits(photoCreditsInfo){
+	if(photoCreditsInfo.length>0){
+		var creditsBtn = document.createElement("DIV");
+		creditsBtn.id="photoCreditsBtn";
+		creditsBtn.innerText = "Photo Credits";
+		footer.appendChild(creditsBtn);
+		var credits = document.getElementById('photoCredits');
+		var credits = document.getElementById('photoCredits');
+		creditsBtn.addEventListener('click', function(){
+			if(credits.style.display == 'flex'){
+				credits.style.display = 'none';
+			}
+			else{
+				credits.style.display = 'flex';
+			}
+		});
+		document.getElementById('mainContent').addEventListener('click', function(){
+			if(credits.style.display == 'flex'){
+				credits.style.display = 'none';
+			}
+		});
+		
+	}
+	for(let i=0; i<photoCreditsInfo.length; i++){
+		var credit = document.createElement("DIV");
+		credit.className = 'photoCredit';
+		var creditOriginal = document.createElement("IMG");
+		creditOriginal.src = photoCreditsInfo[i].original;
+		var creditLink = document.createElement("A");
+		creditLink.setAttribute('href', photoCreditsInfo[i].link);
+		creditLink.innerHTML = "'"+photoCreditsInfo[i].title+"'<br />by "+photoCreditsInfo[i].photographer+"<br />www.freepik.com";
+		
+		credit.appendChild(creditOriginal);
+		credit.appendChild(creditLink);
+		
+		credits.appendChild(credit);
+		
+	}
 }
 
 window.addEventListener('resize', mobileNavSwitch);
@@ -101,4 +129,11 @@ function mobileNavSwitch(){
 		}
 	}
 }
+
+
+
+
+
+
+
 mobileNavSwitch();

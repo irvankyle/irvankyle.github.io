@@ -24,8 +24,13 @@ for (let i=0; i<4; i++){
 		highlightHover.appendChild(highlightContent);
 		highlight.appendChild(highlightHover);
 		highlights.appendChild(highlight);
+		
+		if(projects[i].heroSource){
+			photoCredits.push(projects[i].heroSource);			
+		}
 	}
 }
+generateCredits(photoCredits);
 var displayedHighlights = document.getElementsByClassName('highlight');
 
 
@@ -88,6 +93,14 @@ for (let i=0; i<skills.length; i++){
 	skill.appendChild(skillTitles);
 	skillsList.appendChild(skill);
 }
+
+var profilePic = document.getElementById('photo');
+profilePic.style.backgroundImage = profile.aboutPic;
+var aboutText = document.getElementById('aboutText');
+aboutText.innerHTML = profile.about;
+var tagLine = document.getElementById('splash').children[1].children[2];
+tagLine.innerText = profile.tagLine;
+
 
 
 

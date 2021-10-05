@@ -103,7 +103,7 @@ function generateCredits(photoCreditsInfo){
 		creditOriginal.src = photoCreditsInfo[i].original;
 		var creditLink = document.createElement("A");
 		creditLink.setAttribute('href', photoCreditsInfo[i].link);
-		creditLink.innerHTML = "'"+photoCreditsInfo[i].title+"'<br />by "+photoCreditsInfo[i].photographer+"<br />www.freepik.com";
+		creditLink.innerHTML = "'"+photoCreditsInfo[i].title+"'<br />by "+photoCreditsInfo[i].photographer;
 		
 		credit.appendChild(creditOriginal);
 		credit.appendChild(creditLink);

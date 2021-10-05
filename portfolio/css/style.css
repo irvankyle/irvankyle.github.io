@@ -407,12 +407,13 @@ input[type=submit] {
 @media only screen and (min-width: 900px) {
   /* For tablet: */
 	#photo{
-		height: 250px;
+		height: 300px;
 		width: 300px;
 		border-radius: 0px;
 		float: right;
 		margin: 0 20px;
-		background-size: cover;
+		background-size: 150%;
+		background-position: 20% 25%;
 	}
 	.nav{
 		display: flex;
@@ -451,7 +452,7 @@ input[type=submit] {
 		margin-top: 0;
 	}
 	#splash p{
-		font-size: 24px;
+		font-size: 18px;
 	}
 	#myLogo{
 		height: 225px;

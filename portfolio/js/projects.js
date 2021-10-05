@@ -42,22 +42,22 @@ var projects = [
 		'process': ""
 	},
 	{
-		'id': 'atomicHabits',
-		'title': 'Interactive Book Summary',
-		'type': 'eLearning',
-		'shortDescription': 'This intarctive summary of the book "Atomic Habits" by James Clear presents the main concepts of the book along with interactive elements to really drive the ideas home.',
-		'tools': 'Figma, Articulate Storyline',
-		'skills': 'eLearning, Instructional Design',
-		'client': 'Professional Development',
-		'heroShot': "url('projects/atomicHabits/hero.jpg')",
+		'id': 'devWalkthrough',
+		'title': '',
+		'type': '',
+		'shortDescription': '',
+		'tools': 'Articulate Rise, Camtasia',
+		'skills': 'Web Development, Instructional Design, Technical Writing',
+		'client': 'Toshiba Global Commerce Solutions',
+		'heroShot': "url('projects/devWalkthrough/hero.jpg')",
 		'heroSource': {
-			'original': 'img/stock/overhead-view-digital-tablet-coffee-cup-spiral-notebook-with-pencil-wooden-textured-table.jpg',
-			'link': 'https://www.freepik.com/freepik',
-			'photographer': "freepik",
-			'title': "An overhead view of digital tablet; coffee cup and spiral notebook with pencil on wooden textured table"
+			'original': 'img/stock/fotis-fotopoulos-LJ9KY8pIH3E-unsplash.jpg',
+			'link': 'https://unsplash.com/s/photos/code-dual-monitor?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText',
+			'photographer': "Fotis Fotopoulos",
+			'title': "Two Black Flatscreen Computer Monitors"
 		},
-		'detailShot': "projects/jobAid/detail.png",
-		'link': 'atomicHabits.html',
+		'detailShot': 'projects/construction.png',
+		'link': 'devWalkthrough.html',
 		'problem': 	"",
 		'solution': "",
 		'process': ""
@@ -79,6 +79,27 @@ var projects = [
 		},
 		'detailShot': 'projects/construction.png',
 		'link': 'productxCurricula.html',
+		'problem': 	"",
+		'solution': "",
+		'process': ""
+	},
+	{
+		'id': 'atomicHabits',
+		'title': 'Interactive Book Summary',
+		'type': 'eLearning',
+		'shortDescription': 'This intarctive summary of the book "Atomic Habits" by James Clear presents the main concepts of the book along with interactive elements to really drive the ideas home.',
+		'tools': 'Figma, Articulate Storyline',
+		'skills': 'eLearning, Instructional Design',
+		'client': 'Professional Development',
+		'heroShot': "url('projects/atomicHabits/hero.jpg')",
+		'heroSource': {
+			'original': 'img/stock/overhead-view-digital-tablet-coffee-cup-spiral-notebook-with-pencil-wooden-textured-table.jpg',
+			'link': 'https://www.freepik.com/freepik',
+			'photographer': "freepik",
+			'title': "An overhead view of digital tablet; coffee cup and spiral notebook with pencil on wooden textured table"
+		},
+		'detailShot': "projects/construction.png",
+		'link': 'atomicHabits.html',
 		'problem': 	"",
 		'solution': "",
 		'process': ""

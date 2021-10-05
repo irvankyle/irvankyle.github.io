@@ -61,5 +61,26 @@ var projects = [
 		'problem': 	"",
 		'solution': "",
 		'process': ""
+	},
+	{
+		'id': 'productxCurricula',
+		'title': 'Persona Based Curricula',
+		'type': 'Curriculum',
+		'shortDescription': 'This document lays out the learning paths for a number of differernt learner personas for an enterprise softeare product.',
+		'tools': 'Microsoft Excel, Microsoft Word',
+		'skills': 'Curriculum Development',
+		'client': 'Toshiba Global Commerce Solutions',
+		'heroShot': "url('projects/productxCurricula/hero.jpg')",
+		'heroSource': {
+			'original': 'img/stock/laptop-with-colorful-business-documents.jpg',
+			'link': 'https://www.freepik.com/freepik',
+			'photographer': "freepik",
+			'title': "Laptop with colorful business documents"
+		},
+		'detailShot': 'projects/construction.png',
+		'link': 'productxCurricula.html',
+		'problem': 	"",
+		'solution': "",
+		'process': ""
 	}
 ]

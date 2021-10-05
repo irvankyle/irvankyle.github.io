@@ -184,8 +184,9 @@ a{
 	height: 100px;
 	width: 100px;
 	border-radius: 100px;
-	background-position: 59% 30%;
-	background-image: url('../img/placeholder.jpg');
+	background-position: 40% 25%;
+	background-image: url('../img/profile.jpg');
+	background-size: 350%;
 	margin: auto;
 }
 #about a{
@@ -406,12 +407,11 @@ input[type=submit] {
 @media only screen and (min-width: 900px) {
   /* For tablet: */
 	#photo{
-		height: 350px;
-		width: 285px;
+		height: 250px;
+		width: 300px;
 		border-radius: 0px;
 		float: right;
 		margin: 0 20px;
-		background-position: auto;
 		background-size: cover;
 	}
 	.nav{

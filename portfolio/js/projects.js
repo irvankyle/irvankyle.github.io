@@ -43,9 +43,9 @@ var projects = [
 	},
 	{
 		'id': 'devWalkthrough',
-		'title': '',
-		'type': '',
-		'shortDescription': '',
+		'title': 'App Building Walkthrough',
+		'type': 'eLearning',
+		'shortDescription': 'This eLearning module leads retail technical staff through the process of creating their first app for a point-of-sale extension platform.',
 		'tools': 'Articulate Rise, Camtasia',
 		'skills': 'Web Development, Instructional Design, Technical Writing',
 		'client': 'Toshiba Global Commerce Solutions',
@@ -57,7 +57,28 @@ var projects = [
 			'title': "Two Black Flatscreen Computer Monitors"
 		},
 		'detailShot': 'projects/construction.png',
-		'link': 'devWalkthrough.html',
+		'link': 'projects/devWalkthrough/content/index.html',
+		'problem': 	"",
+		'solution': "",
+		'process': ""
+	},
+	{
+		'id': 'productYArchitecture',
+		'title': 'Intro to Product Architecture',
+		'type': 'eLearning',
+		'shortDescription': 'Part of a series of introductory courses to an enterprise point of sale solution, this module covers the product architecture and deployment options.',
+		'tools': 'Articulate Storyline',
+		'skills': 'eLearning, Instructional Design',
+		'client': 'Toshiba Global Commerce Solutions',
+		'heroShot': "url('projects/productYArchitecture/hero.jpg')",
+		'heroSource': {
+			'original': 'img/stock/overhead-view-digital-tablet-coffee-cup-spiral-notebook-with-pencil-wooden-textured-table.jpg',
+			'link': 'https://www.freepik.com/freepik',
+			'photographer': "freepik",
+			'title': "An overhead view of digital tablet; coffee cup and spiral notebook with pencil on wooden textured table"
+		},
+		'detailShot': "projects/construction.png",
+		'link': 'projects/productYArchitecture/content/index.html',
 		'problem': 	"",
 		'solution': "",
 		'process': ""

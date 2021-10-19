@@ -37,7 +37,7 @@ portfolioBtn.setAttribute('href', 'portfolio.html');
 contactBtn.setAttribute('href', 'contact.html');
 
 nav.appendChild(homeBtn);
-//nav.appendChild(portfolioBtn);
+nav.appendChild(portfolioBtn);
 nav.appendChild(contactBtn);
 
 var mobileNav = nav.cloneNode(true);

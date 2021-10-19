@@ -402,7 +402,51 @@ input[type=submit] {
 	float: right;
 	margin: 8px;
 }
-
+.contactLink {
+	font-family: 'Noto Serif', serif;
+	color: #ff8601;
+}
+.projBox{
+	min-height: 200px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	margin: 12px 0;
+}
+.projImg{
+	height: 200px;
+	width: 200px;
+}
+.projText{
+	max-width: 669px;
+	text-align: center;
+}
+#projList a{
+	margin: 0;
+	padding: 0;
+	display: inline-block;
+	background-color: #ff8601;
+	color: white;
+	text-decoration: none;
+	border-radius: 100px;
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+}
+.solutionLink{
+	padding: 0;
+	display: inline-block;
+	background-color: #ff8601;
+	color: white;
+	text-decoration: none;
+	border-radius: 100px;
+	width: 140px;
+	height: 36px;
+	line-height: 36px;
+	text-align: center;
+	margin: 8px;
+}
 
 @media only screen and (min-width: 900px) {
   /* For tablet: */
@@ -425,9 +469,17 @@ input[type=submit] {
 		color: white;
 		font-size: 18px;
 		line-height: 65px;
-	}
+	}	
 	#heroImg{
+		height: auto;
 		width: 375px;
+	}
+	#projectOverview{
+		align-items: stretch;
+	}
+
+	.projText{
+		text-align: left;
 	}
 }
 @media only screen and (min-width: 1200px) {
@@ -476,7 +528,8 @@ input[type=submit] {
 	}
 	.highlightHover h3{
 		font-size: 24px;
-	}.highlightHover a{
+	}
+	.highlightHover a{
 		width: 200px;
 		height: 50px;
 		line-height: 50px;
@@ -495,5 +548,13 @@ input[type=submit] {
 	}
 	.skill h2{
 		font-size: 16px;
+	}
+	#projList a{
+		font-size: 14px;
+	}
+	.solutionLink{
+		width: 200px;
+		height: 50px;
+		line-height: 50px;
 	}
 }

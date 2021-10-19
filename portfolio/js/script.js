@@ -1,32 +1,34 @@
 var highlights = document.getElementById('highlights');
-for (let i=0; i<4; i++){
+for (let i=0; i<projects.length; i++){
 	if(projects[i]){
-		var highlight = document.createElement("DIV");
-		highlight.className = 'highlight';
-		highlight.style.backgroundSize = 'cover';
-		highlight.style.backgroundPosition = 'center';
-		highlight.style.backgroundImage = projects[i].heroShot;
-		var highlightHover = document.createElement("DIV");
-		highlightHover.className = 'highlightHover';
-		var highlightContent = document.createElement("DIV");
-		highlightContent.className = 'highlightContent';
-		var highlightTitle = document.createElement("H3");
-		highlightTitle.innerText = projects[i].title;
-		var highlightDescription = document.createElement("P");
-		highlightDescription.innerText = projects[i].shortDescription;
-		var highlightBtn = document.createElement("A");
-		highlightBtn.setAttribute('href', projects[i].link);
-		highlightBtn.innerText = 'View Project';
-		
-		highlightContent.appendChild(highlightTitle);
-		highlightContent.appendChild(highlightDescription);
-		highlightContent.appendChild(highlightBtn);
-		highlightHover.appendChild(highlightContent);
-		highlight.appendChild(highlightHover);
-		highlights.appendChild(highlight);
-		
-		if(projects[i].heroSource){
-			photoCredits.push(projects[i].heroSource);			
+		if(projects[i].highlight == 'yes'){
+			var highlight = document.createElement("DIV");
+			highlight.className = 'highlight';
+			highlight.style.backgroundSize = 'cover';
+			highlight.style.backgroundPosition = 'center';
+			highlight.style.backgroundImage = "url(" + projects[i].heroShot + ")";
+			var highlightHover = document.createElement("DIV");
+			highlightHover.className = 'highlightHover';
+			var highlightContent = document.createElement("DIV");
+			highlightContent.className = 'highlightContent';
+			var highlightTitle = document.createElement("H3");
+			highlightTitle.innerText = projects[i].title;
+			var highlightDescription = document.createElement("P");
+			highlightDescription.innerText = projects[i].shortDescription;
+			var highlightBtn = document.createElement("A");
+			highlightBtn.setAttribute('href', projects[i].id + ".html");
+			highlightBtn.innerText = 'View Project';
+			
+			highlightContent.appendChild(highlightTitle);
+			highlightContent.appendChild(highlightDescription);
+			highlightContent.appendChild(highlightBtn);
+			highlightHover.appendChild(highlightContent);
+			highlight.appendChild(highlightHover);
+			highlights.appendChild(highlight);
+			
+			if(projects[i].heroSource){
+				photoCredits.push(projects[i].heroSource);			
+			}
 		}
 	}
 }

@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Process Insights Tutorial - My Docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">My Docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Welcome to MkDocs</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Process Insights Tutorial</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#exercise-add-and-analyze-a-process" class="nav-link">Exercise: Add and Analyze a Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#introduction" class="nav-link">Introduction</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#how-to-complete-the-exercise-in-this-tutorial" class="nav-link">How to Complete the Exercise in this Tutorial</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_1" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#exercise-1-access-appian-community-edition" class="nav-link">Exercise 1: Access Appian Community Edition</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_2" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#exercise-2-add-a-process-in-process-insights" class="nav-link">Exercise 2: Add a Process in Process Insights</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#role-data-steward" class="nav-link">Role: Data Steward</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#exercise-3-investigate-a-process" class="nav-link">Exercise 3: Investigate a Process</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#role-business-analyst" class="nav-link">Role: Business Analyst</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#explore-the-process" class="nav-link">Explore the Process</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#start-an-investigation" class="nav-link">Start an Investigation</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_3" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#create-a-view" class="nav-link">Create a View</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#_4" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#create-a-kpi" class="nav-link">Create a KPI</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#_5" class="nav-link"></a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
+            <li class="nav-item" data-bs-level="1"><a href="#resources" class="nav-link">Resources</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<!-----
+
+You have some errors, warnings, or alerts. If you are using reckless mode, turn it off to see inline alerts.
+* ERRORs: 0
+* WARNINGs: 0
+* ALERTS: 30
+
+Conversion time: 8.063 seconds.
+
+
+Using this Markdown file:
+
+1. Paste this output into your source file.
+2. See the notes and action items below regarding this conversion run.
+3. Check the rendered output (headings, lists, code blocks, tables) for proper
+   formatting and use a linkchecker before you publish this page.
+
+Conversion notes:
+
+* Docs to Markdown version 1.0β37
+* Fri Jul 26 2024 06:43:03 GMT-0700 (PDT)
+* Source doc: Exercise: Add and Analyze a Process
+* Tables are currently converted to HTML tables.
+* This document has images: check for >>>>>  gd2md-html alert:  inline image link in generated source and store images to your server. NOTE: Images in exported zip file from Google Docs may not appear in  the same order as they do in your doc. Please check the images!
+
+
+WARNING:
+You have 8 H1 headings. You may want to use the "H1 -> H2" option to demote all headings by one level.
+
+----->
+
+<p style="color: red; font-weight: bold">>>>>>  gd2md-html alert:  ERRORs: 0; WARNINGs: 1; ALERTS: 30.</p>
+<ul style="color: red; font-weight: bold"><li>See top comment block for details on ERRORs and WARNINGs. <li>In the converted Markdown or HTML, search for inline alerts that start with >>>>>  gd2md-html alert:  for specific instances that need correction.</ul>
+
+<p style="color: red; font-weight: bold">Links to alert messages:</p>
+<p><a href="#gdcalert1">alert1</a>
+<a href="#gdcalert2">alert2</a>
+<a href="#gdcalert3">alert3</a>
+<a href="#gdcalert4">alert4</a>
+<a href="#gdcalert5">alert5</a>
+<a href="#gdcalert6">alert6</a>
+<a href="#gdcalert7">alert7</a>
+<a href="#gdcalert8">alert8</a>
+<a href="#gdcalert9">alert9</a>
+<a href="#gdcalert10">alert10</a>
+<a href="#gdcalert11">alert11</a>
+<a href="#gdcalert12">alert12</a>
+<a href="#gdcalert13">alert13</a>
+<a href="#gdcalert14">alert14</a>
+<a href="#gdcalert15">alert15</a>
+<a href="#gdcalert16">alert16</a>
+<a href="#gdcalert17">alert17</a>
+<a href="#gdcalert18">alert18</a>
+<a href="#gdcalert19">alert19</a>
+<a href="#gdcalert20">alert20</a>
+<a href="#gdcalert21">alert21</a>
+<a href="#gdcalert22">alert22</a>
+<a href="#gdcalert23">alert23</a>
+<a href="#gdcalert24">alert24</a>
+<a href="#gdcalert25">alert25</a>
+<a href="#gdcalert26">alert26</a>
+<a href="#gdcalert27">alert27</a>
+<a href="#gdcalert28">alert28</a>
+<a href="#gdcalert29">alert29</a>
+<a href="#gdcalert30">alert30</a></p>
+<p style="color: red; font-weight: bold">>>>>> PLEASE check and correct alert issues and delete this message and the inline alerts.<hr></p>
+
+<h1 id="exercise-add-and-analyze-a-process">Exercise: Add and Analyze a Process</h1>
+<p><strong>Exercise Guide</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#exercise-add-and-analyze-a-process">Exercise: Add and Analyze a Process</a></li>
+<li><a href="#introduction">Introduction</a><ul>
+<li><a href="#how-to-complete-the-exercise-in-this-tutorial">How to Complete the Exercise in this Tutorial</a></li>
+</ul>
+</li>
+<li><a href="#_1"></a></li>
+<li><a href="#exercise-1-access-appian-community-edition">Exercise 1: Access Appian Community Edition</a></li>
+<li><a href="#_2"></a></li>
+<li><a href="#exercise-2-add-a-process-in-process-insights">Exercise 2: Add a Process in Process Insights</a><ul>
+<li><a href="#role-data-steward">Role: Data Steward</a></li>
+</ul>
+</li>
+<li><a href="#exercise-3-investigate-a-process">Exercise 3: Investigate a Process</a><ul>
+<li><a href="#role-business-analyst">Role: Business Analyst</a></li>
+<li><a href="#explore-the-process">Explore the Process</a></li>
+<li><a href="#start-an-investigation">Start an Investigation</a></li>
+<li><a href="#_3"></a></li>
+<li><a href="#create-a-view">Create a View</a></li>
+<li><a href="#_4"></a></li>
+<li><a href="#create-a-kpi">Create a KPI</a></li>
+</ul>
+</li>
+<li><a href="#_5"></a></li>
+<li><a href="#resources">Resources</a></li>
+</ul>
+</div>
+<h1 id="introduction">Introduction</h1>
+<h2 id="how-to-complete-the-exercise-in-this-tutorial">How to Complete the Exercise in this Tutorial</h2>
+<p>This tutorial will teach you how to use Process HQ to add a new business process, identify process inefficiencies, create a process view, and create a custom KPI. Follow the steps in Exercise 1 to access Appian Community Edition, and then deploy the Order Management (OM) application from the app catalog.</p>
+<pre><code>How Can I Practice?
+You should practice in Appian Community Edition. This free, community Appian resource comes with the ability to deploy pre-built Appian applications.  
+Keep in mind that this is a community environment not suitable for production workloads or sensitive information.
+Appian Version
+Appian Community Edition is on the latest Appian version. If you are following the exercises from a previous Appian version, go to academy.appian.com to download the latest version.
+Naming Conventions
+When you register for Appian Community Edition, you gain access to a workspace, which is your personal area within the community environment. When your workspace has been assigned, you will receive a confirmation email with a workspace ID. Pre-loaded apps in your workspace include the workspace ID.
+Use this workspace ID when creating new applications and objects. Otherwise, you could run into naming conflicts with objects created by other users. In the example below, the application prefix for the Acme Auto Solution app is W0000AS. So, the workspace ID is W0000, which would be included in any new app's prefix.
+
+App Catalog
+The App Catalog contains the most recent versions of pre-built apps available in Appian Community Edition. To go to the App Catalog, on Community Edition Home, click BROWSE APP CATALOG.
+To determine if you have the latest app version, select the app in the list and review the last updated date. If this date is later than when you registered for Appian Community Edition, you should deploy a new version. If you recently received your workspace, you likely have the latest versions.
+Save Often
+Appian does not automatically save updates, so save your objects frequently.
+Additional Resources
+Appian provides a number of training resources for Appian developers. The following resources are particularly popular with our learners: 
+Academy Online - Appian's online courses provide useful survey courses, step-by-step tutorials, and practice exercises. Explore these resources at your own pace. Survey courses will help you develop a better grasp of the topics you need to learn. Video and print tutorials will help you with getting hands-on experience with Appian.
+Community Discussions for New Users - Check out the New to Appian thread in Community. Join our community of experts to ask questions and find answers from past discussions. 
+Appian Documentation - Appian's product documentation will provide you with an overview of key Appian features, newest release information, additional tutorials, and helpful patterns and recipes to implement in your app. 
+</code></pre>
+<h1 id="_1"></h1>
+<h1 id="exercise-1-access-appian-community-edition">Exercise 1: Access Appian Community Edition</h1>
+<p>The exercises are developed for Appian Community Edition. Once you register, you will have access to your own Appian workspace. The workspace comes with preloaded objects that you will need as you complete these steps.  </p>
+<p>Follow the steps below to register:</p>
+<ol>
+<li>Go to <a href="https://explore.appian.community/suite/webapi/global-redirect">Appian Community Edition</a>.</li>
+<li>Sign in with your Appian Community credentials.</li>
+<li>Select a region, then complete the onboarding questions and acknowledgement. When your workspace has been assigned, you’ll receive a confirmation email.</li>
+</ol>
+<p>Keep in mind that this is a community environment not suitable for production workloads or sensitive information.</p>
+<p>For help accessing this environment, please email <a href="mailto:CommunityEdition@appian.com">CommunityEdition@appian.com</a>.</p>
+<p>To get the pre-built app used in these exercises, follow the steps below:</p>
+<ol>
+<li>From Community Edition Home, click <strong>BROWSE APP CATALOG</strong>.</li>
+<li>Select the Order Management,</li>
+<li>Click <strong>DEPLOY APP TO WORKSPACE</strong> then<strong> DEPLOY</strong> to deploy the application. </li>
+</ol>
+<p>The deployment may take several minutes. When complete, you’ll receive a confirmation email, and the new app will appear in your workspace.</p>
+<h1 id="_2"></h1>
+<h1 id="exercise-2-add-a-process-in-process-insights">Exercise 2: Add a Process in Process Insights</h1>
+<h2 id="role-data-steward">Role: Data Steward</h2>
+<table>
+  <tr>
+   <td>
+
+<p id="gdcalert1" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image1.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert2">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<img src="images/image1.png" width="" alt="alt_text" title="image_tooltip">
+
+   </td>
+   <td><strong>Scenario</strong>
+<p>
+Next Gen wants to investigate their order fulfillment process to identify the cause of a recent increase in the average order fulfillment duration.
+<p>
+To enable this analysis, you — a data steward with the permission for handling the order-related record types  in Process HQ — will set up a process in the Process Insights page. 
+<p>
+First, you’ll identify the correct record types and will use them to add a process to the Process Insights page. Then you’ll configure process security to make this process available for analysis by qualified business analysts. 
+   </td>
+  </tr>
+</table>
+
+<ol>
+<li>Log into Appian Community Edition and access Process HQ from the navigation menu.  \</li>
+</ol>
+<p id="gdcalert2" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image2.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert3">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image2.png" title="image_tooltip" /></p>
+<ol>
+<li>Click </li>
+</ol>
+<p id="gdcalert3" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image3.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert4">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image3.png" title="image_tooltip" />
+ to open the <strong>Process Insights</strong> page. Click the <strong>+ ADD PROCESS </strong>button in the right-hand corner.</p>
+<p id="gdcalert4" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image4.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert5">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image4.png" title="image_tooltip" /></p>
+<ol>
+<li>Select the <strong>Order Submissions</strong> record type, and click <strong>NEXT</strong>. </li>
+</ol>
+<p id="gdcalert5" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image5.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert6">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image5.png" title="image_tooltip" /></p>
+<ol>
+<li>Select the <strong>Order Submission Events</strong> record type, and click <strong>NEXT</strong>. \</li>
+</ol>
+<p id="gdcalert6" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image6.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert7">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image6.png" title="image_tooltip" /></p>
+<p>Next, Appian allows you to select or deselect the fields from the case and event history record types based on what attributes you want to make available to analysts in Process HQ. You can also create custom attributes to refine your existing data. In this exercise, you’ll group order prices into three buckets: low, medium, and high.</p>
+<ol>
+<li>In the <strong>Configure Case Data</strong> step, click **ADD CUSTOM ATTRIBUTE.  \
+**</li>
+</ol>
+<p id="gdcalert7" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image7.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert8">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image7.png" title="image_tooltip" /></p>
+<ol>
+<li>In the <strong>Create Custom Attribute </strong>dialog, select<strong> Groups Based on a Range</strong>, and click <strong>NEXT</strong>. Apply the following configurations:<ul>
+<li>In the <strong>Create Groups From </strong>field, select <strong>Price</strong>.</li>
+<li>In the <strong>Number of Groups </strong>field,  click the<strong> + </strong>icon to add a third group.</li>
+<li>In the<strong> Custom</strong> <strong>Attribute Value</strong> fields, enter the following values: <ul>
+<li>Low includes values ≤ 2000.</li>
+<li>Medium includes values &gt;2000 and ≤ 6000.</li>
+<li>High includes any remaining values.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p id="gdcalert8" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image8.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert9">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image8.png" title="image_tooltip" /></p>
+<pre><code>* Click **TEST **to preview the values, then **NEXT**.
+* Enter attribute properties:
+    * **Name**: Enter `Price Group`.
+    * **Description**: Enter  `Low: Price ≤ 2000, Medium: 2000 &amp;lt; Price ≤ 6000, High: 6000 &amp;lt; Price`. 
+    * Click **CREATE**.
+</code></pre>
+<ol>
+<li>Deselect the <strong>Price</strong> field, then click <strong>NEXT</strong>.<ul>
+<li>The <strong>Price</strong> field is replaced by the <strong>Price Group</strong> attribute you just created.</li>
+</ul>
+</li>
+<li>
+<p>In the <strong>Configure Event Data</strong> step, deselect the following fields:</p>
+<ul>
+<li><strong>Id</strong> from the <strong>Order Submission Events</strong> record type</li>
+<li><strong>Event Type Id</strong> from the <strong>Order Submission Events</strong> record type</li>
+<li><strong>Id</strong> from the <strong>Order Submission Event Type</strong> record type</li>
+</ul>
+<p>These fields are not useful to the analyst and do not need to be included in the process.</p>
+</li>
+</ol>
+<p id="gdcalert9" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image9.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert10">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image9.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>MAP ATTRIBUTES</strong>.</li>
+</ol>
+<p id="gdcalert10" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image10.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert11">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image10.png" title="image_tooltip" /></p>
+<ol>
+<li>
+<p>Review what each field is mapped to, and then update field mapping as follows:</p>
+<ul>
+<li><strong>End Time</strong> field:  Select <strong>End</strong>.</li>
+</ul>
+<p>The <strong>Map Attributes</strong> screen is also where you can rename attributes. This may be necessary if you have attributes from different record types that have conflicting names.</p>
+</li>
+</ol>
+<p id="gdcalert11" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image11.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert12">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image11.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>OK, </strong>then<strong> NEXT</strong>.</li>
+<li>Configure process properties and security: <ul>
+<li><strong>Name</strong>: Enter <code>Order Submissions (First Name Last Name)</code>.<ul>
+<li>In order to avoid naming conflicts with other users in Appian Community Edition, append your first and last name to the name of the process.</li>
+</ul>
+</li>
+<li><strong>Description</strong>: Enter <code>A process for the fulfillment of submitted orders</code>.</li>
+<li><strong>Process Security</strong>:<strong> </strong>Verify that your user is the analyst for the process. <ul>
+<li>You can click <strong>Add Users or Groups</strong> to add additional analysts or viewers for this process. </li>
+</ul>
+</li>
+<li><strong>Update Options</strong>: Leave the default settings. These settings control when Process HQ will check for new data in the associated record types and reevaluate process metrics.</li>
+</ul>
+</li>
+</ol>
+<p id="gdcalert12" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image12.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert13">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image12.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>ADD PROCESS</strong>. </li>
+</ol>
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>
+<strong>Tip</strong>
+<p>
+You’re done with adding a new process to the Process Insights page. It may take a few minutes to complete the process creation before it becomes available for analysis. 
+<p>
+Click the refresh button 
+
+<p id="gdcalert13" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image13.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert14">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<img src="images/image13.png" width="" alt="alt_text" title="image_tooltip">
+ to see the updated status. 
+   </td>
+  </tr>
+</table>
+
+<p>**Congratulations! **</p>
+<p><strong>You just set up a process in process insights, and made it available for analysis.</strong></p>
+<h1 id="exercise-3-investigate-a-process">Exercise 3: Investigate a Process</h1>
+<h2 id="role-business-analyst">Role: Business Analyst</h2>
+<table>
+  <tr>
+   <td>
+
+<p id="gdcalert14" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image14.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert15">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+
+<img src="images/image14.png" width="" alt="alt_text" title="image_tooltip">
+
+   </td>
+   <td><strong>Scenario</strong>
+<p>
+In this exercise, you’ll act as a business analyst and start an investigation of the order fulfillment process. 
+<p>
+You’ll start your exploration by <strong>starting a new investigation</strong>. Appian will assist by suggesting the attributes to investigate further. Once you identify an area for improvement, you’ll <strong>create an insight</strong> to share across your team.  Then, you will apply filters to <strong>create a view</strong> into a meaningful segment of your data. Finally, you’ll <strong>create a KPI</strong> for tracking a specific process metric.
+   </td>
+  </tr>
+</table>
+
+<h2 id="explore-the-process">Explore the Process</h2>
+<ol>
+<li>Navigate to the <strong>Process Insights</strong> page in Process HQ, and open the process you just created. \</li>
+</ol>
+<p id="gdcalert15" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image15.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert16">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image15.png" title="image_tooltip" /></p>
+<ol>
+<li>Spend a few minutes on the <strong>SUMMARY </strong>tab reviewing the high-level generated discoveries, so that you can understand your process better before you dig deeper. As a business analyst, here you can accomplish the following:<ul>
+<li>Review the default KPIs. </li>
+<li>Review the process diagram to see how the process runs in practice.</li>
+<li>Review the available case attributes.</li>
+<li>Review the default chart that reflects the change in volume and duration over time. </li>
+<li>Adjust the timeframe for displayed data. </li>
+</ul>
+</li>
+<li>Try to answer the following questions?<ul>
+<li>Look at the process diagram. Which activities, if any, appear to be slowing down the process? Which sequence in the process takes the longest?</li>
+<li>Look at the chart at the bottom of the <strong>SUMMARY</strong> tab. What happens to case duration as the number of cases increases?</li>
+</ul>
+</li>
+</ol>
+<h2 id="start-an-investigation">Start an Investigation</h2>
+<p>An investigation is a guided experience that allows business analysts to uncover what attributes or sequences contribute the most to a specific performance issue (for example, a longer case duration). </p>
+<ol>
+<li>In the top right corner, click <strong>START INVESTIGATION</strong>.</li>
+</ol>
+<p id="gdcalert16" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image16.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert17">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image16.png" title="image_tooltip" /></p>
+<ol>
+<li>Note that Appian identified that cases with the shipping vendor Pioneer Solutions are slower than average with a potential savings of over 2,000 days. The potential savings in the number of days of work you can save each year as a result of bringing the cases with this attribute in line with the average case duration of your process.  \
+Click <strong>Pioneer Solutions</strong> to investigate further.</li>
+</ol>
+<p id="gdcalert17" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image17.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert18">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image17.png" title="image_tooltip" />
+Review the metrics for cases involving Pioneer Solutions. Since these cases are slower, you’ll save this as your first finding to your insight. Saving an insight will enable you to share it with other collaborators. </p>
+<ol>
+<li>Click <strong>+ ADD TO INSIGHT</strong>. </li>
+</ol>
+<p id="gdcalert18" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image18.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert19">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image18.png" title="image_tooltip" /></p>
+<ol>
+<li>Continue investigating by clicking **Investigate Sequences. \
+**</li>
+</ol>
+<p id="gdcalert19" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image19.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert20">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image19.png" title="image_tooltip" /></p>
+<ol>
+<li>Notice that the first suggested sequence to investigate <strong>Notified the Shipping Vendor → Notified the Shipping Vendor </strong>is slower than average and is a repetition. Repetitions are flagged by Process HQ since they typically indicate an inefficiency. Click <strong>Notified the Shipping Vendor → Notified the Shipping Vendor</strong> to explore the impact of this sequence on the process. \</li>
+</ol>
+<p id="gdcalert20" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image20.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert21">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image20.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>+ ADD TO INSIGHT</strong>.  \</li>
+</ol>
+<p id="gdcalert21" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image21.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert22">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image21.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>Save New Insight</strong>. </li>
+</ol>
+<p id="gdcalert22" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image22.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert23">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image22.png" title="image_tooltip" /></p>
+<ol>
+<li>In the next dialog, add the following for your insight:</li>
+<li><strong>Insight Name</strong>: Enter <code>Orders Shipped with Pioneer Solutions</code>.</li>
+<li><strong>Investigation Name</strong>: Enter <code>Recent Spike in Order Fulfillment Duration</code>.</li>
+<li><strong>Comment (Optional)</strong>: Enter any comment to share with your team. </li>
+<li>Click <strong>SAVE AND EXIT</strong>.</li>
+</ol>
+<p id="gdcalert23" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image23.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert24">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image23.png" title="image_tooltip" /></p>
+<table>
+  <tr>
+   <td>
+   </td>
+   <td>
+<strong>Best Practice</strong>
+<p>
+A typical insight should have 2 to 3 findings, but this number will vary based on your dataset. Include as many findings as you need to provide the right level of detail for your use case. 
+<p>
+In this exercise, you added two findings. However, a business analyst could continue with the investigation by looking at additional attributes in the process. 
+   </td>
+  </tr>
+</table>
+
+<p>**Congratulations! **</p>
+<p>**You just saved an investigation with a new and valuable insight. You or other analysts can add more insights to this investigation later. **</p>
+<h2 id="_3"></h2>
+<h2 id="create-a-view">Create a View</h2>
+<p>The investigation in the previous step revealed a bottleneck involving repeated work with the shipping vendor Pioneer Solutions. Following this investigation, analysts were able to look deeper into affected processes and determine that errors in manual data entry are causing the delays. With this issue addressed, you will now create a view for your process. Views show metrics for a filtered subset of your process data. In this case, you’ll create a view that allows you to monitor cases involving Pioneer Solutions to assess performance in the future.</p>
+<ol>
+<li>Navigate to the <strong>SUMMARY</strong> tab. <ul>
+<li>If the <strong>SUMMARY</strong> tab is not visible, you may need to navigate back to your process using the breadcrumbs at the top of the page.</li>
+</ul>
+</li>
+<li>Open the ALL CASES dropdown and click <strong>CREATE VIEW</strong>.</li>
+</ol>
+<p id="gdcalert24" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image24.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert25">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image24.png" title="image_tooltip" /></p>
+<ol>
+<li>In the <strong>CREATE VIEW </strong>dialog, the default <strong>Start from Scratch </strong>option is pre-selected for you. Click <strong>NEXT</strong>.</li>
+</ol>
+<p id="gdcalert25" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image25.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert26">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image25.png" title="image_tooltip" /></p>
+<ol>
+<li>In the <strong>Filter by Attribute</strong> step, open <strong>Shipping Vendor</strong> and select <strong>Pioneer Solutions</strong>. Then, click <strong>NEXT</strong>.</li>
+</ol>
+<p id="gdcalert26" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image26.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert27">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image26.png" title="image_tooltip" /></p>
+<ol>
+<li>In the <strong>Filter by Activity</strong> step, don’t apply any filters, and click <strong>NEXT</strong>. </li>
+<li>Name your view <code>Orders Shipped via Pioneer Solutions</code>, and click<strong> CREATE</strong>. <ul>
+<li>Once you click <strong>CREATE</strong>, the new view becomes available to all analysts for this process.  </li>
+</ul>
+</li>
+<li>Review the default KPIs that got updated to reflect your new segment of data.</li>
+</ol>
+<p>**Congratulations! **</p>
+<p>**You just created a view to zoom in on a meaningful segment of your data. **</p>
+<h2 id="_4"></h2>
+<h2 id="create-a-kpi">Create a KPI</h2>
+<p>As you create views and conduct investigations, Appian provides you with default KPIs. However, there will be times when you want to create custom KPIs that reflect your own understanding of a business process. In this exercise, you’ll build a custom KPI to monitor the duration of the Notified the Shipping Vendor Activity and add it to the view created in the previous step. Tracking this KPI over time allows you to see at a glance if the issue at Pioneer Solutions is being appropriately addressed.</p>
+<ol>
+<li>Verify that you are in the view you just created: <strong>Orders Shipped via Pioneer Solutions</strong>.</li>
+</ol>
+<p id="gdcalert27" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image27.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert28">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image27.png" title="image_tooltip" /></p>
+<ol>
+<li>Click the <strong>CUSTOM</strong> <strong>KPIS</strong> tab.  </li>
+</ol>
+<p id="gdcalert28" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image28.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert29">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image28.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>CREATE NEW KPI</strong>.</li>
+<li>Click <strong>Duration</strong> then <strong>NEXT</strong>.</li>
+<li>
+<p>In the <strong>Create KPI</strong> dialog, select <strong>Activity Duration</strong>, and then apply the following configurations:</p>
+<ul>
+<li><strong>Activity:</strong> Select <strong>Notified the Shipping Vendor</strong>.</li>
+<li><strong>Aggregation:</strong> Select <strong>Average</strong>.</li>
+<li><strong>Unit: </strong>Select <strong>Detect automatically</strong>.</li>
+</ul>
+<p>You’ll see the preview of your KPI on the right:</p>
+</li>
+</ol>
+<p id="gdcalert29" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image29.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert30">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image29.png" title="image_tooltip" /></p>
+<ol>
+<li>Click <strong>NEXT</strong>, then configure the properties for this KPI as follows:<ul>
+<li><strong>Name</strong>:<strong> </strong>Enter <code>Duration of Shipper Notification</code>.</li>
+<li><strong>Descriptions</strong>:<strong> </strong>Enter <code>KPI to monitor the duration of the shipper notification step</code>.</li>
+<li><strong>Views</strong>:<strong> </strong>Select <strong>Orders Shipped via Pioneer Solutions</strong> to display the KPI in your view of the process. </li>
+</ul>
+</li>
+<li>Click <strong>CREATE</strong>.  Your KPI now displays in the CUSTOM KPIs tab. <ul>
+<li>You can click the <strong>three-dot menu</strong>, and then select <strong>Pin to Summary</strong> to display this KPI together with default generated KPIs in the Summary tab.  </li>
+</ul>
+</li>
+</ol>
+<p id="gdcalert30" ><span style="color: red; font-weight: bold">>>>>>  gd2md-html alert: inline image link here (to images/image30.png). Store image on your image server and adjust path/filename/extension if necessary. </span><br>(<a href="#">Back to top</a>)(<a href="#gdcalert31">Next alert</a>)<br><span style="color: red; font-weight: bold">>>>>> </span></p>
+
+<p><img alt="alt_text" src="images/image30.png" title="image_tooltip" /></p>
+<p><strong>Congratulations! You’ve created your first custom KPI.</strong></p>
+<table>
+  <tr>
+   <td>
+   </td>
+   <td><strong>Note</strong>
+<p>
+Custom KPIs can be added to and removed from views on the <strong>Custom KPIs</strong> tab for each view. The KPI will always reflect the data filtered for the current view.
+   </td>
+  </tr>
+</table>
+
+<h1 id="_5"></h1>
+<h1 id="resources">Resources</h1>
+<p><a href="https://docs.appian.com/suite/help/24.2/processhq.html">Appian Product Documentation</a> - The Appian docs page contains information on all Process HQ features and functionality. </p>
+<p><a href="http://academy.appian.com">Academy Online</a> - Visit Academy Online to enroll in all Process HQ courses. </p>
+<!-- watermark -->
+<div style="background-color:#FFFFFF"><p style="color:#FFFFFF; font-size: 1px">gd2md-html: xyzzy Fri Jul 26 2024</p></div></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

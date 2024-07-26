@@ -1,0 +1,16 @@
+h1 {
+    color: #020a51;
+}
+.navbar.bg-primary {
+    background-image: linear-gradient(#020a51, #020a51 60%, #020a51);
+}
+.col-md-9 img {
+    max-width: 100%;
+    display: inline-block;
+    padding: 0px;
+    line-height: 1.428571429;
+    background-color: var(--bs-secondary-bg-subtle);
+    border: 2px solid rgb(146, 146, 146);
+    border-radius: 0px;
+    margin: 0px auto 0px auto;
+}

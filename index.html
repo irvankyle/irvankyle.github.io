@@ -1,70 +1,800 @@
-<html>
-<head>	
-	<title>Kyle Irvan | Instructional Design</title>
-    <link rel="shortcut icon" href="img/icon.png">
-	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;900&family=Noto+Serif&display=swap" rel="stylesheet"> 
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyle Irvan | Technical Instructional Designer Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#fff7ed',
+                            100: '#ffedd5',
+                            500: '#fe8601',
+                            600: '#e57700',
+                            700: '#c26400',
+                            900: '#7c3f00',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+	</script>
+	<script type="text/javascript">
+	   (function(){
+     	 emailjs.init({
+     	   publicKey: "_os4LE9zkCbcDiMYG",
+     	 });
+  	 })();
+	</script>   
+    
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8;
+        }
+        .modal {
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+        ::selection {
+            background-color: #fe8601;
+            color: #ffffff;
+        }
+    </style>
 </head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans">
 
-<body>
+    <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <div style="background-image: url('img/icon.png'); background-size:cover" class="w-10 h-10 rounded-xl bg-gradient-to-tr from-[#fe8601] to-amber-400 flex items-center justify-center text-white font-bold shadow-lg shadow-[#fe8601]/30 group-hover:scale-105 transition-transform">
+                   <!--<i class="fa-solid fa-graduation-cap"></i>-->
+                </div>
+                <div>
+                    <span class="font-bold text-lg text-slate-900 block leading-tight">Kyle Irvan</span>
+                    <span class="text-xs text-[#fe8601] font-semibold tracking-wider uppercase">Technical ID & Facilitator</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium text-slate-600">
+                <a href="#about" class="hover:text-[#fe8601] transition-colors">About</a>
+                <a href="#expertise" class="hover:text-[#fe8601] transition-colors">Competencies</a>
+                <a href="#samples" class="hover:text-[#fe8601] transition-colors">Work Samples</a>
+                <a href="#workshops" class="hover:text-[#fe8601] transition-colors" style="display:none">Workshops</a>
+                <a href="#experience" class="hover:text-[#fe8601] transition-colors">Experience</a>
+            </nav>
 
-<div id='header'>
-</div>
-<div id='mainContent'>
-	<section id='splash' class='narrow'>
-		<div id="myLogo"></div>
-		<div>
-			<h1>Kyle Irvan</h1>
-			<h2>Instructional Designer</h2>
-			<p>Tagline</p>
-		</div>
-	</section>
+            <div class="flex items-center space-x-4">
+                <a href="#contact" class="hidden sm:inline-flex items-center justify-center px-5 py-2.5 rounded-xl bg-[#fe8601] hover:bg-[#e57700] text-white font-semibold text-sm shadow-md shadow-[#fe8601]/20 transition-all hover:shadow-lg hover:shadow-[#fe8601]/30 active:scale-95">
+                    Let's Connect
+                </a>
+                <button id="mobile-menu-btn" class="md:hidden text-slate-700 hover:text-[#fe8601] p-2 focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
 
-	<section id='work'class='fullWidth'>
-		<h1>My Work</h1>
-		<div id='highlights'>
-		</div>
-		<a href='portfolio.html'>See more   〉</a>
-	</section>
+        <!-- Mobile Menu Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-slate-200 px-4 pt-2 pb-6 space-y-3 shadow-xl">
+            <a href="#about" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">About</a>
+            <a href="#expertise" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Expertise</a>
+            <a href="#samples" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Work Samples</a>
+            <a href="#workshops" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Workshops</a>
+            <a href="#experience" class="block px-3 py-2 rounded-lg text-base font-medium text-slate-700 hover:bg-slate-100">Experience</a>
+            <a href="#contact" class="block w-full text-center px-4 py-3 rounded-xl bg-[#fe8601] text-white font-semibold shadow-md">Let's Connect</a>
+        </div>
+    </header>
 
-	<section id='about' class='narrow'>
-		<h1>About Me</h1>
-		<div class='content'>
-			<div id='photo'></div>
-			<div id='aboutText'>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sed ante facilisis, rutrum augue non, dictum lectus. Phasellus dapibus metus mattis erat dapibus cursus. Duis lacinia consequat neque. Mauris pulvinar vitae metus pretium hendrerit. Nam efficitur velit ligula. Vivamus non lectus vitae velit scelerisque accumsan. Mauris sed nibh eget augue volutpat lacinia.</p>
-				<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vivamus quis arcu hendrerit, egestas metus eget, convallis ligula. Curabitur id ex volutpat, euismod sem vel, blandit ipsum. Etiam bibendum odio in lacinia bibendum. Nunc ornare mi enim, ut commodo eros pulvinar vel. Nulla facilisi. Phasellus lorem lorem, consectetur id nunc at, laoreet vestibulum dolor.</p>
-			</div>
-		</div>
-	</section>
+    <main class="pt-20">
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-gradient-to-b from-[#fff7ed]/60 via-slate-50 to-slate-50">
+            <div class="absolute inset-0 opacity-20 bg-[radial-gradient(#fe8601_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none"></div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                        
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight leading-[1.1]">
+                            Turning Complex Software Into <span class="bg-gradient-to-r from-[#fe8601] to-amber-500 bg-clip-text text-transparent">Clear Learning Journeys</span>
+                        </h1>
+                        <p class="text-lg sm:text-xl text-slate-600 max-w-2xl mx-auto lg:mx-0 font-normal leading-relaxed">
+                            I'm <strong class="text-slate-900">Kyle Irvan</strong>, an Instructional Systems Designer with over 10 years of experience building scalable e-learning systems, AI-accelerated workflows, live technical broadcasts, and hands-on workshops for complex software platforms.
+                        </p>
+                        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-4">
+                            <a href="#samples" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-[#fe8601] hover:bg-[#e57700] text-white font-bold text-base shadow-xl shadow-[#fe8601]/25 transition-all hover:scale-[1.02] active:scale-95 text-center flex items-center justify-center space-x-2">
+                                <span>Explore Work Samples</span>
+                                <i class="fa-solid fa-arrow-down"></i>
+                            </a>
+                            <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-xl bg-white hover:bg-slate-100 text-slate-700 font-bold text-base border border-slate-200 shadow-sm transition-all text-center">
+                                Get in Touch
+                            </a>
+                        </div>
+                        <div class="pt-6 border-t border-slate-200/80 flex items-center justify-center lg:justify-start space-x-8 text-slate-500 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                                <span>ADDIE, SAM & Agile</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fa-solid fa-check-circle text-emerald-500"></i>
+                                <span>Appian Certified Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 flex justify-center">
+                        <div class="relative w-full max-w-md">
+                            <div class="absolute -inset-1.5 bg-gradient-to-r from-[#fe8601] to-amber-400 rounded-3xl blur-xl opacity-25 animate-pulse"></div>
+                            <div class="relative bg-white rounded-2xl p-8 border border-slate-200 shadow-2xl space-y-6">
+                                <div class="flex items-center justify-between pb-4 border-b border-slate-100">
+                                    <span class="text-xs font-bold text-slate-400 tracking-wider uppercase">Core Skills</span>
+                                </div>
+                                <div class="space-y-4">
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                        <div class="w-10 h-10 rounded-lg bg-[#fff7ed] flex items-center justify-center text-[#fe8601] text-lg">
+                                            <i class="fa-solid fa-laptop-code"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Course Authoring & AI</h4>
+                                            <p class="text-xs text-slate-500">Articulate Rise/Storyline, Custom HTML/CSS, AI Acceleration and Steering</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                        <div class="w-10 h-10 rounded-lg bg-[#fff7ed] flex items-center justify-center text-[#fe8601] text-lg">
+                                            <i class="fa-solid fa-video"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">Video & Broadcast</h4>
+                                            <p class="text-xs text-slate-500">OBS Studio, Camtasia, DaVinci Resolve, YouTube Live</p>
+                                        </div>
+                                    </div>
+                                    <div class="flex items-center space-x-3 p-3 rounded-xl bg-slate-50 border border-slate-100">
+                                        <div class="w-10 h-10 rounded-lg bg-[#fff7ed] flex items-center justify-center text-[#fe8601] text-lg">
+                                            <i class="fa-solid fa-users-rectangle"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="text-sm font-bold text-slate-900">LMS Administration</h4>
+                                            <p class="text-xs text-slate-500">LMS, SCORM, Reporting/Analytics</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-	<section id='skills' class='fullWidth'>
-		<h1>Skills and Technologies</h1>
-		<div id='skillsList'>
-		</div>
-	</section>
-</div>
+        <section id="about" class="py-20 bg-white border-y border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                    <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">My Background</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Creating Scalable Learning Systems for Technical Audiences</h3>
+                    <p class="text-slate-600 text-base sm:text-lg">
+                        I bridge rigorous technical depth with adult learning theory to translate complex software into empowering education.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#fe8601]/50 transition-all hover:shadow-lg space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#fe8601] text-white flex items-center justify-center text-xl font-bold shadow-md shadow-[#fe8601]/30">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">AI-Accelerated Design</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Engineering custom AI prompt steering workflows to rapidly prototype course scripts, outlines, and custom HTML/CSS blocks in Articulate Rise without sacrificing pedagogical rigor.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#fe8601]/50 transition-all hover:shadow-lg space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#fe8601] text-white flex items-center justify-center text-xl font-bold shadow-md shadow-[#fe8601]/30">
+                            <i class="fa-solid fa-broadcast-tower"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">Synchronous Broadcasts</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Producing and hosting live technical broadcasts and YouTube livestreams for global software developers, expanding reach to over 1,000+ views per session.
+                        </p>
+                    </div>
+                    <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200/80 hover:border-[#fe8601]/50 transition-all hover:shadow-lg space-y-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#fe8601] text-white flex items-center justify-center text-xl font-bold shadow-md shadow-[#fe8601]/30">
+                            <i class="fa-solid fa-chalkboard-user"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-slate-900">Hands-On Workshops</h4>
+                        <p class="text-slate-600 text-sm leading-relaxed">
+                            Facilitating high-impact instructor-led technical workshops at annual user conferences, guiding developer cohorts through live exercises and real-time troubleshooting.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="expertise" class="py-20 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="max-w-3xl mx-auto text-center space-y-4 mb-16">
+                    <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">Competencies</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Skills & Tools</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Card 1 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-3 bg-[#fff7ed] text-[#fe8601] rounded-xl">
+                                <i class="fa-solid fa-laptop-code text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Instructional Design</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>ADDIE, SAM & Agile Frameworks</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>AI Prompt Steering & Content Acceleration</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>SME Collaboration & Feature Reviews</span></li>
+                        </ul>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-3 bg-[#fff7ed] text-[#fe8601] rounded-xl">
+                                <i class="fa-solid fa-pen-nib text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Authoring & Media</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Articulate Rise & Storyline 360</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Custom HTML/CSS Blocks</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Camtasia & DaVinci Resolve</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Clueso & OBS Studio</span></li>
+                        </ul>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-3 bg-[#fff7ed] text-[#fe8601] rounded-xl">
+                                <i class="fa-solid fa-chalkboard text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Delivery & Broadcast</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Technical Workshop Facilitation</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Live Stream Broadcast Production</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Interactive Q&A Management</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Saba LMS Administration</span></li>
+                        </ul>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <div class="p-3 bg-[#fff7ed] text-[#fe8601] rounded-xl">
+                                <i class="fa-solid fa-award text-xl"></i>
+                            </div>
+                            <h4 class="font-bold text-slate-900">Credentials</h4>
+                        </div>
+                        <ul class="space-y-2 text-sm text-slate-600">
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>Appian Associate Developer Certified</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>B.S. Physics, Michigan State Univ.</span></li>
+                            <li class="flex items-center space-x-2"><i class="fa-solid fa-check text-[#fe8601] text-xs"></i><span>10+ Years Technical ID Experience</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="samples" class="py-20 bg-white border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+                    <div class="space-y-4 ">
+                        <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">Portfolio Showcase</h2>
+                        <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">e-Learning and ILT Training Samples</h3>
+                        <p class="text-slate-600 text-base">
+                            Explore selected work samples designed for technical users. Click any card to inspect learning objectives, authoring tools used, and key design highlights. More work samples are available upon <a style="color: #fe8601; font-weight: bold" href='#contact'>request</a>.
+                        </p>
+                    </div>
+                    <div style="display:none" class="mt-6 md:mt-0 flex space-x-2">
+                        <button class="filter-btn px-4 py-2 rounded-xl bg-[#fe8601] text-white font-medium text-sm shadow-sm transition-all" data-filter="all">All</button>
+                        <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium text-sm transition-all" data-filter="self-paced">Self-Paced</button>
+                        <button class="filter-btn px-4 py-2 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 font-medium text-sm transition-all" data-filter="simulation">Simulations</button>
+                    </div>
+                </div>
 
-<div id='footer'>
-<div id="photoCredits">
-</div>
-</div>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="portfolio-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between" data-category="self-paced">
+                        <div>
+                            <div class="relative h-48 bg-gradient-to-tr from-[#fe8601] to-amber-600 p-6 flex flex-col justify-between text-white overflow-hidden">
+                                <div class="absolute right-[-20px] bottom-[-20px] opacity-10 text-9xl font-extrabold"><i class="fa-solid fa-code"></i></div>
+                                <span class="self-start px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">Articulate Rise e-Learning</span>
+                                <h4 class="text-xl font-bold tracking-tight">Interfaces 102: Building Dynamic Interfaces</h4>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    An immersive self-paced course covering the SAIL language to build dynamic interfaces responding to user input and actions.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Articulate Rise</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Camtasia Video</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Interactive UI</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('api-modal')" class="w-full py-3 rounded-xl bg-white hover:bg-[#fe8601] hover:text-white text-[#fe8601] font-semibold text-sm border border-[#ffedd5] shadow-sm transition-all flex items-center justify-center space-x-2">
+                                <span>View Course Details</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
 
+                    <!-- Project 2 -->
+                    <div class="project-card group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between" data-category="simulation">
+                        <div>
+                            <div class="relative h-48 bg-gradient-to-tr from-[#fe8601] to-amber-600 p-6 flex flex-col justify-between text-white overflow-hidden">
+                                <div class="absolute right-[-20px] bottom-[-20px] opacity-10 text-9xl font-extrabold"><i class="fa-solid fa-laptop"></i></div>
+                                <span class="self-start px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">Hands-On Workshop</span>
+                                <h4 class="text-xl font-bold tracking-tight">Transform Your UI Designs</h4>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    An ILT workshop with exercises where learners practice customizing application interfaces.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Hands-On</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Environment Management</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">UX Training</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('cloud-modal')" class="w-full py-3 rounded-xl bg-white hover:bg-[#fe8601] hover:text-white text-[#fe8601] font-semibold text-sm border border-[#ffedd5] shadow-sm transition-all flex items-center justify-center space-x-2">
+                                <span>View Workshop Details</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
 
+                    <!-- Project 3 -->
+                    <div class="project-card group bg-slate-50 rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl transition-all flex flex-col justify-between" data-category="simulation">
+                        <div>
+                            <div class="relative h-48 bg-gradient-to-tr from-[#fe8601] to-amber-600 p-6 flex flex-col justify-between text-white overflow-hidden">
+                                <div class="absolute right-[-20px] bottom-[-20px] opacity-10 text-9xl font-extrabold"><i class="fa-solid fa-laptop"></i></div>
+                                <span class="self-start px-3 py-1 bg-white/20 backdrop-blur-md rounded-full text-xs font-semibold">Articulate Storyline e-Learning</span>
+                                <h4 class="text-xl font-bold tracking-tight">Intro to Product Architecture</h4>
+                            </div>
+                            <div class="p-6 space-y-4">
+                                <p class="text-sm text-slate-600 leading-relaxed">
+                                    e-Learning course covering high-level software architecture concepts for POS systems.
+                                </p>
+                                <div class="flex flex-wrap gap-2">
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Articulate Storyline</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">High-level Concepts</span>
+                                    <span class="px-2.5 py-1 bg-white border border-slate-200 text-slate-600 text-xs rounded-lg font-medium">Interactive</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="px-6 pb-6 pt-2">
+                            <button onclick="openModal('architecture-modal')" class="w-full py-3 rounded-xl bg-white hover:bg-[#fe8601] hover:text-white text-[#fe8601] font-semibold text-sm border border-[#ffedd5] shadow-sm transition-all flex items-center justify-center space-x-2">
+                                <span>View Course Details</span>
+                                <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
 
+        <section id="workshops" class="py-20 bg-slate-50 border-t border-slate-200" style="display:none">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                    <div class="lg:col-span-6 space-y-6">
+                        <div class="inline-flex items-center space-x-2 px-3.5 py-1.5 rounded-full bg-[#ffedd5] text-[#c26400] text-xs font-semibold tracking-wide uppercase">
+                            <span>Live Instructor-Led Training</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Hands-On Technical Workshop Facilitation</h2>
+                        <p class="text-slate-600 text-base leading-relaxed">
+                            Beyond self-paced modules, I design and facilitate high-engagement technical workshops for developers, product managers, and enterprise administrators.
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                <div class="w-10 h-10 rounded-lg bg-[#fff7ed] text-[#fe8601] flex items-center justify-center flex-shrink-0 text-lg font-bold">
+                                    <i class="fa-solid fa-people-arrows"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Collaborative Live Labs</h4>
+                                    <p class="text-slate-600 text-xs mt-1">Structured virtual breakout rooms where teams solve real bugs and implement software features under guided mentorship.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-4 p-4 rounded-xl bg-white border border-slate-200 shadow-sm">
+                                <div class="w-10 h-10 rounded-lg bg-[#fff7ed] text-[#fe8601] flex items-center justify-center flex-shrink-0 text-lg font-bold">
+                                    <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-slate-900 text-base">Measurable Adoption Metrics</h4>
+                                    <p class="text-slate-600 text-xs mt-1">Pre- and post-workshop assessments ensuring retention rates exceed 92% across enterprise cohorts.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-6">
+                        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-xl space-y-6">
+                            <h3 class="text-xl font-bold text-slate-900 pb-4 border-b border-slate-100">Workshop Design Blueprint</h3>
+                            <div class="space-y-5">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-8 h-8 rounded-full bg-[#fff7ed] text-[#fe8601] font-bold flex items-center justify-center text-sm">1</div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-800 text-sm">Pre-Work & Sandbox Setup</h5>
+                                        <p class="text-xs text-slate-500">Eliminating friction before session kickoff.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-8 h-8 rounded-full bg-[#fff7ed] text-[#fe8601] font-bold flex items-center justify-center text-sm">2</div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-800 text-sm">Concept & Guided Demonstration</h5>
+                                        <p class="text-xs text-slate-500">Short 10-minute micro-lectures with live examples.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-8 h-8 rounded-full bg-[#fff7ed] text-[#fe8601] font-bold flex items-center justify-center text-sm">3</div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-800 text-sm">Hacked Challenges & Breakouts</h5>
+                                        <p class="text-xs text-slate-500">Hands-on coding tasks with peer collaboration.</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-8 h-8 rounded-full bg-[#fff7ed] text-[#fe8601] font-bold flex items-center justify-center text-sm">4</div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-800 text-sm">Retrospective & Debrief</h5>
+                                        <p class="text-xs text-slate-500">Reviewing solutions and addressing edge cases.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="experience" class="py-20 bg-white border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-4 mb-16">
+                    <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">Career Track</h2>
+                    <h3 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">Employment History</h3>
+                </div>
+                <div class="space-y-8 relative before:absolute before:inset-0 before:left-7 before:w-0.5 before:bg-slate-200">
+                    <!-- Job 1 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="w-14 h-14 rounded-2xl bg-[#fe8601] text-white font-bold flex items-center justify-center shadow-lg shadow-[#fe8601]/30 z-10 flex-shrink-0">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex-1 space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h4 class="text-lg font-bold text-slate-900">Instructional Systems Designer II</h4>
+                                <span class="px-3 py-1 bg-[#fff7ed] text-[#c26400] rounded-full text-xs font-semibold self-start sm:self-auto">Nov 2021 – Present</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-[#fe8601]">Appian Corporation</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Create e-Learning and ILT modules covering the entire product and solutions line for an enterprise automation software company. Developed AI-driven scripting and outlining workflows using custom steering files to rapidly generate course artifacts including interactive custom HTML/CSS blocks in Articulate Rise. Design and publish asynchronous software development modules covering the Appian platform, scaling up to thousands of annual completions. Produce and host interactive YouTube livestreams (~75 live attendees, ~1,000+ views per broadcast) and facilitate hands-on technical workshops at user conferences.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Job 2 -->
+                    <div class="relative flex items-start space-x-6">
+                        <div class="w-14 h-14 rounded-2xl bg-slate-800 text-white font-bold flex items-center justify-center shadow-lg z-10 flex-shrink-0">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 flex-1 space-y-3">
+                            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
+                                <h4 class="text-lg font-bold text-slate-900">Learning Specialist</h4>
+                                <span class="px-3 py-1 bg-slate-200 text-slate-700 rounded-full text-xs font-semibold self-start sm:self-auto">Jan 2013 – Nov 2021</span>
+                            </div>
+                            <h5 class="text-sm font-semibold text-slate-600">Toshiba Global Commerce Solutions</h5>
+                            <p class="text-sm text-slate-600 leading-relaxed">
+                                Created interactive technical e-learning modules using Articulate Storyline, and Camtasia, to deliver POS hardware and software instruction. Designed and facilitated technical workshop series for several products for ~20 participants per class. Managed Saba LMS administration (content deployment, enrollments, completion tracking) and produced digital job aids.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="py-16 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center space-y-3 mb-12">
+                    <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">Academic Foundation</h2>
+                    <h3 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">Education & Certifications</h3>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#fff7ed] text-[#fe8601] flex items-center justify-center text-xl flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-[#fe8601] uppercase tracking-wider">Professional Certification</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-1">Appian Associate Developer Certification</h4>
+                            <p class="text-xs text-slate-500 mt-1">Appian Corporation</p>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm flex items-start space-x-4">
+                        <div class="w-12 h-12 rounded-xl bg-[#fff7ed] text-[#fe8601] flex items-center justify-center text-xl flex-shrink-0 font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-semibold text-[#fe8601] uppercase tracking-wider">University Degree</span>
+                            <h4 class="font-bold text-slate-900 text-base mt-1">Bachelor of Science (B.S.) in Physics</h4>
+                            <p class="text-xs text-slate-500 mt-1">Michigan State University</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="py-20 bg-gradient-to-b from-slate-50 to-slate-950 text-white">
+            <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="bg-slate-900/90 backdrop-blur-xl border border-slate-800 rounded-3xl p-8 sm:p-12 shadow-2xl grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <div class="lg:col-span-5 space-y-6">
+                        <h2 class="text-xs font-bold text-[#fe8601] tracking-widest uppercase">Get in Touch</h2>
+                        <h3 class="text-3xl font-extrabold text-white tracking-tight">Let's Discuss Your Next Training Initiative</h3>
+                        <p class="text-slate-400 text-sm leading-relaxed">
+                            Whether you need self-paced technical courses, workshop facilitation, or curriculum overhaul, I'm ready to collaborate.
+                        </p>
+                        <div class="space-y-4 pt-2" >
+                            <div class="flex items-center space-x-4 text-slate-300" style="display:none">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-[#fe8601]">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <a href="mailto:fake@kyleirvan.com" class="text-sm font-medium hover:text-[#fe8601] transition-colors">fake@kyleirvan.com</a>
+                            </div>
+                            <div class="flex items-center space-x-4 text-slate-300">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-[#fe8601]">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </div>
+                                <span class="text-sm font-medium"><a href="https://www.linkedin.com/in/kyle-irvan-85643061/">LinkedIn</a></span>
+                            </div>
+                            <div class="flex items-center space-x-4 text-slate-300" style="display:none">
+                                <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-[#fe8601]">
+                                    <i class="fa-brands fa-github"></i>
+                                </div>
+                                <span class="text-sm font-medium">github.com/kyleirvan</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-7">
+                      <div class="field">
+   					      <form id="contact-form"  method="POST" enctype="text/plain" onsubmit="handleFormSubmit(event)" class="space-y-4">
+                            <div>
+                                <label for="name" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Your Name</label>
+                                <input type="text" name="name" id="name" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-[#fe8601] text-sm">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Email Address</label>
+                                <input type="email" name="email" id="email" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-[#fe8601] text-sm">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-xs font-bold text-slate-300 uppercase tracking-wider mb-2">Message</label>
+                                <textarea name="message" id="message" rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white focus:outline-none focus:border-[#fe8601] text-sm"></textarea>
+                            </div>
+                            <button type="submit" class="w-full py-4 rounded-xl bg-[#fe8601] hover:bg-[#e57700] text-white font-bold text-sm shadow-lg shadow-[#fe8601]/30 transition-all">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Dialogs for Work Samples -->
+    <div id="api-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none p-4">
+        <div class="bg-white rounded-3xl max-w-xl w-full p-8 shadow-2xl space-y-6 relative transform scale-95 transition-all max-h-[90vh] overflow-y-auto">
+            <button onclick="closeModal('api-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <span class="px-3 py-1 bg-[#fff7ed] text-[#fe8601] rounded-full text-xs font-semibold">Articulate Rise • Self-Paced Module</span>
+                <h3 class="text-2xl font-bold text-slate-900">Interfaces 102: Building Dynamic Interfaces</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+                <p><strong>Overview:</strong> This self-paced technical module guides developers and application designers through the core concepts of the SAIL (Self-Assembling Interface Language) framework. Learners master how to write expressions that bind data, handle user events, and construct reactive UI layouts.</p>
+                <p><strong>Key Learning Objectives:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                    <li>Compare and contrast Design Mode and Expression Mode to determine when to use each.</li>
+                    <li>Store and manipulate data within an interface using local variables.</li>
+                    <li>Apply looping functions to scale your component configurations.</li>
+                    <li>Use links to capture user input.</li>
+                    <li>Configure and manage user data entry using the Editable Grid component.</li>
+                </ul>
+            </div>
+            
+            <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                <a href="https://docs.google.com/document/d/14-c-2RYxexSKZcHWu1iBL8XCjZsHiOR6crB_Ff2yC4k/edit?usp=drive_link" target="_blank" class="flex-1 py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl text-sm transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-file text-[#fe8601]"></i>
+                    <span>View Course Outline & Script</span>
+                </a>
+                <a href="interfaces102/index.html" target="_blank" class="flex-1 py-3 px-4 bg-[#fe8601] hover:bg-[#e57700] text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center space-x-2 shadow-lg shadow-[#fe8601]/25">
+                    <i class="fa-solid fa-external-link-alt"></i>
+                    <span>Open Course</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+
+    <div id="cloud-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl space-y-6 relative transform scale-95 transition-all">
+            <button onclick="closeModal('cloud-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <span class="px-3 py-1 bg-[#fff7ed] text-[#fe8601] rounded-full text-xs font-semibold">Hands-on ILT Workshop</span>
+                <h3 class="text-2xl font-bold text-slate-900">Transform Your UI Designs</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600">
+                <p><strong>Overview:</strong> This hands-on ILT workshop was delivered at the Appian World conference in 2026 to an audience of customers and business partners. Development of this workshop involved creating a replicable user sandbox where learners could perform the exercises, writing and testing the exercises, and rehearsing with the facilitator to ensure technical details and timing.</p>
+                <p><strong>Key Learning Objectives:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                    <li>Use Appian’s “forward flow” to generate application interfaces.</li>
+                    <li>Create and manage interface test cases.</li>
+                    <li>Add an interface to a user site homepage.</li>
+                    <li>Configure site branding with custom CSS.</li>
+                </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                <a href="https://docs.google.com/document/d/1vlh3EuPOHrI-IO1M1wgHXPBtMOz0FrVi-DKD6UOUCFg/edit?usp=drive_link" target="_blank" class="flex-1 py-3 px-4 bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold rounded-xl text-sm transition-all flex items-center justify-center space-x-2">
+                    <i class="fa-solid fa-file text-[#fe8601]"></i>
+                    <span>View Learner Exercise Guide</span>
+                </a>
+                <a href="https://youtu.be/FpoZ5HrPzNM" target="_blank" class="flex-1 py-3 px-4 bg-[#fe8601] hover:bg-[#e57700] text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center space-x-2 shadow-lg shadow-[#fe8601]/25">
+                    <i class="fa-solid fa-external-link-alt"></i>
+                    <span>Watch Full Session</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div id="architecture-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl space-y-6 relative transform scale-95 transition-all">
+            <button onclick="closeModal('architecture-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <span class="px-3 py-1 bg-[#fff7ed] text-[#fe8601] rounded-full text-xs font-semibold">Articulate Storyline • Self-Paced Module</span>
+                <h3 class="text-2xl font-bold text-slate-900">Intro to Product Architecture</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600">
+                <p><strong>Overview:</strong> This self-paced conceptual course introduces learners to the software architecture for a point-of-sale solution. This course is targeted to technical and non-technical audiences.</p>
+                <p><strong>Key Learning Objectives:</strong></p>
+                <ul class="list-disc pl-5 space-y-1 text-slate-600">
+                    <li>List core microservices employed by Product-Y</li>
+                    <li>Describe the benefits of MVC architecture for the client UI.</li>
+                    <li>Explain the purpose of databridges between modern and legacy environments.</li>
+                    <li>List key Product-Y use cases.</li>
+                </ul>
+            </div>
+            <div class="pt-4 border-t border-slate-100 flex flex-col sm:flex-row gap-3">
+                <a href="productYArchitecture/index.html" target="_blank" class="flex-1 py-3 px-4 bg-[#fe8601] hover:bg-[#e57700] text-white font-bold rounded-xl text-sm transition-all flex items-center justify-center space-x-2 shadow-lg shadow-[#fe8601]/25">
+                    <i class="fa-solid fa-external-link-alt"></i>
+                    <span>Open Course</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="sql-modal" class="modal fixed inset-0 z-50 flex items-center justify-center bg-slate-900/60 backdrop-blur-sm opacity-0 pointer-events-none p-4">
+        <div class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl space-y-6 relative transform scale-95 transition-all">
+            <button onclick="closeModal('sql-modal')" class="absolute top-6 right-6 text-slate-400 hover:text-slate-600">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="space-y-2">
+                <span class="px-3 py-1 bg-[#fff7ed] text-[#fe8601] rounded-full text-xs font-semibold">Self-Paced eLearning</span>
+                <h3 class="text-2xl font-bold text-slate-900">SQL Query Optimization for Support Engineers</h3>
+            </div>
+            <div class="space-y-4 text-sm text-slate-600">
+                <p><strong>Challenge:</strong> Support personnel needed to diagnose slow database queries quickly during live customer escalations.</p>
+                <p><strong>Solution:</strong> Built bite-sized video tutorials using Camtasia coupled with interactive quiz checks.</p>
+                <p><strong>Results:</strong> Cut average ticket resolution time by 30 minutes.</p>
+            </div>
+            <button onclick="closeModal('sql-modal')" class="w-full py-3 bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold rounded-xl text-sm transition-all">Close Details</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Portfolio Filtering
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const projectCards = document.querySelectorAll('.project-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => {
+                    b.classList.remove('bg-[#fe8601]', 'text-white');
+                    b.classList.add('bg-slate-100', 'text-slate-600');
+                });
+                btn.classList.remove('bg-slate-100', 'text-slate-600');
+                btn.classList.add('bg-[#fe8601]', 'text-white');
+
+                const filter = btn.getAttribute('data-filter');
+                projectCards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal Functions
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.querySelector('div.transform').classList.remove('scale-95');
+            modal.querySelector('div.transform').classList.add('scale-100');
+        }
+
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.querySelector('div.transform').classList.remove('scale-100');
+            modal.querySelector('div.transform').classList.add('scale-95');
+        }
+
+        function openScriptModal() {
+            const scriptModal = document.getElementById('script-modal');
+            scriptModal.classList.remove('opacity-0', 'pointer-events-none');
+            scriptModal.querySelector('div.transform').classList.remove('scale-95');
+            scriptModal.querySelector('div.transform').classList.add('scale-100');
+        }
+
+        function closeScriptModal() {
+            const scriptModal = document.getElementById('script-modal');
+            scriptModal.classList.add('opacity-0', 'pointer-events-none');
+            scriptModal.querySelector('div.transform').classList.remove('scale-100');
+            scriptModal.querySelector('div.transform').classList.add('scale-95');
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            // Custom non-alert feedback box
+            const form = document.getElementById('contact-form');
+            
+            emailjs.sendForm('service_blmvpn6', 'template_ok6hm1h', form)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
+            
+            
+            form.innerHTML = `
+                <div class="p-6 rounded-2xl bg-amber-950/60 border border-[#fe8601]/50 text-center space-y-3">
+                    <i class="fa-solid fa-circle-check text-[#fe8601] text-3xl"></i>
+                    <h4 class="font-bold text-white text-lg">Message Sent Successfully!</h4>
+                    <p class="text-xs text-slate-300">Thank you for reaching out. I will get back to you within 24 hours.</p>
+                </div>
+            `;
+        }
+    </script>
 </body>
- <script src="js/header_footer.js"></script> 
- <script src="js/projects.js"></script> 
- <script src="js/profile.js"></script> 
- <script src="js/skills.js"></script>
- <script src="js/script.js"></script> 
-
-
 </html>
